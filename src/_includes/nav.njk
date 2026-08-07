@@ -1,118 +1,60 @@
-<header class="fixed inset-x-0 top-0 z-30">
-  <div class="mx-auto max-w-6xl px-4 pt-4 sm:pt-6">
-    <div id="siteNav" class="flex items-center justify-between gap-4 rounded-full bg-cream-50/90 backdrop-blur-xl ring-1 ring-espresso-600/10 shadow-soft-sm px-4 py-2.5 sm:pl-5 sm:pr-2.5 transition-all duration-500 ease-fluid">
-
-      <a href="/" class="flex items-center gap-2.5 shrink-0">
-        <svg width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <g fill="currentColor" class="text-gold-500">
-            <circle cx="50" cy="24" r="15"/>
-            <circle cx="50" cy="76" r="15"/>
-            <circle cx="24" cy="37.5" r="15"/>
-            <circle cx="76" cy="37.5" r="15"/>
-            <circle cx="24" cy="62.5" r="15"/>
-            <circle cx="76" cy="62.5" r="15"/>
-          </g>
-          <circle cx="50" cy="50" r="16" fill="#FDFBF7"/>
-        </svg>
-        <span class="font-serif text-[1.05rem] leading-tight text-espresso-700">
-          Signature <span class="italic text-sage-600">Therapeutic</span> Wellness
-        </span>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-1 font-medium text-[0.9rem] text-espresso-600">
-        <a href="/" class="rounded-full px-3.5 py-2 transition-colors hover:bg-espresso-600/5 hover:text-espresso-700">Home</a>
-        <a href="/insurance-accepted-massage/" class="rounded-full px-3.5 py-2 transition-colors hover:bg-espresso-600/5 hover:text-espresso-700">Insurance</a>
-
-        <details class="group relative">
-          <summary class="list-none flex items-center gap-1 cursor-pointer rounded-full px-3.5 py-2 transition-colors hover:bg-espresso-600/5 hover:text-espresso-700 [&::-webkit-details-marker]:hidden">
-            Our Services
-            <svg class="h-3 w-3 transition-transform duration-300 ease-fluid group-open:rotate-180" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </summary>
-          <div class="absolute left-1/2 top-full mt-3 w-72 -translate-x-1/2 rounded-[1.5rem] bg-cream-50 p-2 ring-1 ring-espresso-600/10 shadow-soft">
-            {% for item in site.nav %}{% if item.label == "Our Services" %}{% for child in item.children %}
-            <a href="{{ child.href }}" class="block rounded-2xl px-4 py-2.5 text-[0.9rem] text-espresso-600 transition-colors hover:bg-sage-50 hover:text-sage-600">{{ child.label }}</a>
-            {% endfor %}{% endif %}{% endfor %}
-          </div>
-        </details>
-
-        <details class="group relative">
-          <summary class="list-none flex items-center gap-1 cursor-pointer rounded-full px-3.5 py-2 transition-colors hover:bg-espresso-600/5 hover:text-espresso-700 [&::-webkit-details-marker]:hidden">
-            Conditions We Treat
-            <svg class="h-3 w-3 transition-transform duration-300 ease-fluid group-open:rotate-180" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </summary>
-          <div class="absolute left-1/2 top-full mt-3 w-64 -translate-x-1/2 rounded-[1.5rem] bg-cream-50 p-2 ring-1 ring-espresso-600/10 shadow-soft">
-            {% for item in site.nav %}{% if item.label == "Conditions We Treat" %}{% for child in item.children %}
-            <a href="{{ child.href }}" class="block rounded-2xl px-4 py-2.5 text-[0.9rem] text-espresso-600 transition-colors hover:bg-sage-50 hover:text-sage-600">{{ child.label }}</a>
-            {% endfor %}{% endif %}{% endfor %}
-          </div>
-        </details>
-
-        <a href="/price/" class="rounded-full px-3.5 py-2 transition-colors hover:bg-espresso-600/5 hover:text-espresso-700">Price</a>
-      </nav>
-
-      <div class="hidden lg:flex items-center gap-2">
-        <a href="{{ site.giftCardUrl }}" target="_blank" rel="noopener" class="rounded-full px-4 py-2 text-[0.9rem] font-medium text-espresso-600 ring-1 ring-espresso-600/15 transition-all duration-500 ease-fluid hover:ring-espresso-600/35">Gift Card</a>
-        <a href="{{ site.bookUrl }}" target="_blank" rel="noopener" class="group btn-primary text-[0.9rem]">
-          Book Now
-          <span class="btn-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-      </div>
-
-      <button id="menuToggle" aria-label="Open menu" aria-expanded="false" class="lg:hidden relative h-10 w-10 shrink-0 rounded-full transition-colors hover:bg-espresso-600/5">
-        <span class="absolute left-1/2 top-1/2 h-[1.5px] w-5 -translate-x-1/2 bg-espresso-700 transition-all duration-500 ease-fluid" style="translate: 0 -4px;" data-bar="1"></span>
-        <span class="absolute left-1/2 top-1/2 h-[1.5px] w-5 -translate-x-1/2 bg-espresso-700 transition-all duration-500 ease-fluid" data-bar="2"></span>
-        <span class="absolute left-1/2 top-1/2 h-[1.5px] w-5 -translate-x-1/2 bg-espresso-700 transition-all duration-500 ease-fluid" style="translate: 0 4px;" data-bar="3"></span>
-      </button>
-    </div>
-  </div>
-
-  <div id="mobileMenu" class="lg:hidden fixed inset-0 z-20 opacity-0 pointer-events-none transition-opacity duration-500 ease-fluid">
-    <div class="absolute inset-0 bg-cream-50/95 backdrop-blur-2xl"></div>
-    <div class="relative flex h-full flex-col overflow-y-auto px-6 pb-10 pt-28">
-      <nav class="flex flex-col gap-1 text-2xl font-serif text-espresso-700">
-        {% set mobileItems = [
-          { label: "Home", href: "/" },
-          { label: "Insurance Accepted", href: "/insurance-accepted-massage/" }
-        ] %}
-        {% for item in mobileItems %}
-        <a href="{{ item.href }}" class="mobile-link translate-y-8 opacity-0 border-b border-espresso-600/10 py-4 transition-all duration-700 ease-fluid">{{ item.label }}</a>
-        {% endfor %}
-
-        <details class="mobile-link translate-y-8 opacity-0 border-b border-espresso-600/10 py-4 transition-all duration-700 ease-fluid">
-          <summary class="list-none flex items-center justify-between cursor-pointer [&::-webkit-details-marker]:hidden">
-            Our Services
-            <svg class="h-4 w-4" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </summary>
-          <div class="mt-3 flex flex-col gap-1 pl-2 text-base font-sans">
-            {% for item in site.nav %}{% if item.label == "Our Services" %}{% for child in item.children %}
-            <a href="{{ child.href }}" class="py-2 text-espresso-600">{{ child.label }}</a>
-            {% endfor %}{% endif %}{% endfor %}
-          </div>
-        </details>
-
-        <details class="mobile-link translate-y-8 opacity-0 border-b border-espresso-600/10 py-4 transition-all duration-700 ease-fluid">
-          <summary class="list-none flex items-center justify-between cursor-pointer [&::-webkit-details-marker]:hidden">
-            Conditions We Treat
-            <svg class="h-4 w-4" viewBox="0 0 12 12" fill="none"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </summary>
-          <div class="mt-3 flex flex-col gap-1 pl-2 text-base font-sans">
-            {% for item in site.nav %}{% if item.label == "Conditions We Treat" %}{% for child in item.children %}
-            <a href="{{ child.href }}" class="py-2 text-espresso-600">{{ child.label }}</a>
-            {% endfor %}{% endif %}{% endfor %}
-          </div>
-        </details>
-
-        <a href="/price/" class="mobile-link translate-y-8 opacity-0 border-b border-espresso-600/10 py-4 transition-all duration-700 ease-fluid">Price</a>
-      </nav>
-
-      <div class="mobile-link translate-y-8 opacity-0 mt-8 flex flex-col gap-3 transition-all duration-700 ease-fluid">
-        <a href="{{ site.giftCardUrl }}" target="_blank" rel="noopener" class="group btn-outline justify-center text-base">Gift Card</a>
-        <a href="{{ site.bookUrl }}" target="_blank" rel="noopener" class="group btn-primary justify-center text-base">
-          Book Now
-          <span class="btn-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-        <a href="{{ site.phoneHref }}" class="mt-2 text-center text-sm text-espresso-500">{{ site.phone }}</a>
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo">
+    {% include "logo.njk" %}
+    Signature Therapeutic Wellness
+  </a>
+  <div class="nav-links">
+    <div class="nav-drop">
+      <a>Our Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="nav-drop-menu">
+        {% for item in site.nav %}{% if item.label == "Our Services" %}{% for child in item.children %}
+        <a href="{{ child.href }}">{{ child.label }}</a>
+        {% endfor %}{% endif %}{% endfor %}
       </div>
     </div>
+    <div class="nav-drop">
+      <a>Conditions We Treat <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+      <div class="nav-drop-menu">
+        {% for item in site.nav %}{% if item.label == "Conditions We Treat" %}{% for child in item.children %}
+        <a href="{{ child.href }}">{{ child.label }}</a>
+        {% endfor %}{% endif %}{% endfor %}
+      </div>
+    </div>
+    <a href="/insurance-accepted-massage/">Insurance</a>
+    <a href="/price/">Price</a>
   </div>
-</header>
+  <div class="nav-cta">
+    <a href="{{ site.giftCardUrl }}" class="gift-link" target="_blank" rel="noopener">Gift Cards</a>
+    <a href="{{ site.bookUrl }}" class="btn nav-btn" target="_blank" rel="noopener">Book Now</a>
+  </div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation">
+  <a href="/">Home</a>
+  <div class="mobile-section">
+    <div class="mobile-section-label">Our Services</div>
+    {% for item in site.nav %}{% if item.label == "Our Services" %}{% for child in item.children %}
+    <a href="{{ child.href }}">{{ child.label }}</a>
+    {% endfor %}{% endif %}{% endfor %}
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-label">Conditions We Treat</div>
+    {% for item in site.nav %}{% if item.label == "Conditions We Treat" %}{% for child in item.children %}
+    <a href="{{ child.href }}">{{ child.label }}</a>
+    {% endfor %}{% endif %}{% endfor %}
+  </div>
+  <div class="mobile-section">
+    <div class="mobile-section-label">More</div>
+    <a href="/insurance-accepted-massage/">Insurance Accepted</a>
+    <a href="/price/">Price</a>
+    <a href="/privacy-policy/">Privacy Policy</a>
+    <a href="/accessibility-statement/">Accessibility Statement</a>
+  </div>
+  <div class="mobile-ctas">
+    <a href="{{ site.bookUrl }}" class="btn" target="_blank" rel="noopener">Book Appointment</a>
+    <a href="{{ site.giftCardUrl }}" class="btn-outline" target="_blank" rel="noopener">Gift Cards</a>
+  </div>
+</div>

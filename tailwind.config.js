@@ -4,45 +4,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cream: {
-          50: "#FDFBF7",
-          100: "#FBF6EE",
-          200: "#F4EBDA",
+        navy: {
+          50: "#EEF2FC",
+          200: "#C3D0F5",
+          400: "#3355C0",
+          500: "#0A2896",
+          600: "#071C6E",
+          700: "#051652",
         },
-        espresso: {
-          400: "#5A4F45",
-          500: "#3E362E",
-          600: "#2B2420",
-          700: "#1C1815",
+        blue: {
+          200: "#BFDCFB",
+          300: "#7DB4F5",
+          500: "#006EDC",
+          600: "#0058B0",
         },
-        sage: {
-          50: "#F1F4EC",
-          200: "#D7DFC9",
-          400: "#9DAD87",
-          500: "#7C8B6F",
-          600: "#647159",
-        },
-        gold: {
-          300: "#D9BD8C",
-          400: "#C7A468",
-          500: "#B8935F",
-          600: "#93754C",
-        },
+        cream: "#F6F8FC",
+        blush: "#EDF2FA",
+        espresso: "#10151F",
+        stone: "#5B6472",
+        pearl: "#E2E8F4",
       },
       fontFamily: {
-        serif: ["Fraunces", "ui-serif", "Georgia", "serif"],
-        sans: ["Plus Jakarta Sans", "ui-sans-serif", "system-ui", "sans-serif"],
-      },
-      borderRadius: {
-        squircle: "2rem",
+        serif: ["'Playfair Display'", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        soft: "0 30px 60px -20px rgba(43, 36, 32, 0.18)",
-        "soft-sm": "0 12px 30px -12px rgba(43, 36, 32, 0.15)",
-        "inner-hi": "inset 0 1px 1px rgba(255,255,255,0.4)",
-      },
-      transitionTimingFunction: {
-        fluid: "cubic-bezier(0.32, 0.72, 0, 1)",
+        sm: "0 2px 10px rgba(10,40,150,.08)",
+        md: "0 8px 32px rgba(10,40,150,.12)",
+        lg: "0 20px 60px rgba(10,40,150,.16)",
       },
     },
   },

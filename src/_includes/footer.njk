@@ -1,62 +1,55 @@
-<footer class="relative mt-32 bg-espresso-700 text-cream-100">
-  <div class="mx-auto max-w-6xl px-6 py-20">
-    <div class="grid grid-cols-1 gap-12 md:grid-cols-4">
-      <div class="md:col-span-2">
-        <a href="/" class="flex items-center gap-2.5">
-          <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g fill="currentColor" class="text-gold-400">
-              <circle cx="50" cy="24" r="15"/>
-              <circle cx="50" cy="76" r="15"/>
-              <circle cx="24" cy="37.5" r="15"/>
-              <circle cx="76" cy="37.5" r="15"/>
-              <circle cx="24" cy="62.5" r="15"/>
-              <circle cx="76" cy="62.5" r="15"/>
-            </g>
-            <circle cx="50" cy="50" r="16" fill="#2B2420"/>
-          </svg>
-          <span class="font-serif text-lg text-cream-50">Signature Therapeutic Wellness</span>
-        </a>
-        <p class="mt-5 max-w-sm text-sm leading-relaxed text-cream-100/60">
-          Personalized, patient-centered massage therapy in Redmond, WA — dedicated to relaxation, pain relief, and improved mobility.
-        </p>
-        <div class="mt-6 flex items-center gap-3">
-          <a href="{{ site.bookUrl }}" target="_blank" rel="noopener" class="group btn-primary bg-gold-500 hover:bg-gold-600 text-espresso-700 text-[0.85rem]">
-            Book Now
-            <span class="btn-icon bg-espresso-700/10"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
-        </div>
+<footer class="footer">
+  <div class="footer-main container">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        {% include "logo.njk" %}
+        <span>Signature Therapeutic Wellness</span>
       </div>
-
-      <div>
-        <p class="eyebrow bg-cream-50/10 text-cream-100 ring-cream-50/15">Services</p>
-        <ul class="mt-4 space-y-2.5 text-sm text-cream-100/70">
-          <li><a href="/swedish-massage/" class="transition-colors hover:text-gold-300">Swedish Massage</a></li>
-          <li><a href="/deep-tissue-massage/" class="transition-colors hover:text-gold-300">Deep Tissue Massage</a></li>
-          <li><a href="/pain-relief-massage/" class="transition-colors hover:text-gold-300">Pain Relief Massage</a></li>
-          <li><a href="/lymphatic-detox-massage/" class="transition-colors hover:text-gold-300">Lymphatic Detox Massage</a></li>
-          <li><a href="/facial-skincare/" class="transition-colors hover:text-gold-300">Facial & Skin Care</a></li>
-          <li><a href="/pip-li-injury-massage/" class="transition-colors hover:text-gold-300">PIP/L&amp;I Injury Massage</a></li>
-          <li><a href="/insurance-coveredmassage/" class="transition-colors hover:text-gold-300">Insurance-Covered Massage</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="eyebrow bg-cream-50/10 text-cream-100 ring-cream-50/15">Visit</p>
-        <ul class="mt-4 space-y-3 text-sm text-cream-100/70">
-          <li><a href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener" class="transition-colors hover:text-gold-300">{{ site.address.line1 }}<br>{{ site.address.line2 }}</a></li>
-          <li><a href="{{ site.phoneHref }}" class="transition-colors hover:text-gold-300">{{ site.phone }}</a></li>
-          <li><a href="mailto:{{ site.email }}" class="transition-colors hover:text-gold-300">{{ site.email }}</a></li>
-        </ul>
-      </div>
+      <p>Personalized, patient-centered massage therapy in Redmond, WA — dedicated to relaxation, pain relief, and improved mobility.</p>
     </div>
-
-    <div class="mt-16 flex flex-col gap-4 border-t border-cream-50/10 pt-8 text-xs text-cream-100/50 sm:flex-row sm:items-center sm:justify-between">
-      <p>&copy; {{ "now" | currentYear }} Signature Therapeutic Wellness. All rights reserved.</p>
-      <div class="flex gap-6">
-        {% for link in site.footerLinks %}
-        <a href="{{ link.href }}" class="transition-colors hover:text-gold-300">{{ link.label }}</a>
-        {% endfor %}
-      </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <a href="/swedish-massage/">Swedish Massage</a>
+      <a href="/deep-tissue-massage/">Deep Tissue Massage</a>
+      <a href="/pain-relief-massage/">Pain Relief Massage</a>
+      <a href="/lymphatic-detox-massage/">Lymphatic Detox Massage</a>
+      <a href="/facial-skincare/">Facial &amp; Skin Care</a>
+      <a href="/pip-li-injury-massage/">PIP/L&amp;I Injury Massage</a>
+      <a href="/insurance-coveredmassage/">Insurance-Covered Massage</a>
+    </div>
+    <div class="footer-col">
+      <h4>Conditions &amp; More</h4>
+      <a href="/neck-shoulder-pain/">Neck &amp; Shoulder Pain</a>
+      <a href="/lower-back-pain/">Back &amp; Lower Back Pain</a>
+      <a href="/hips-legs-pain/">Hips &amp; Legs Pain</a>
+      <a href="/manual-lymphatic-drainage/">Manual Lymphatic Drainage</a>
+      <a href="/insurance-accepted-massage/">Insurance Accepted</a>
+      <a href="/price/">Price</a>
+    </div>
+    <div class="footer-col">
+      <h4>Visit Us</h4>
+      <address class="footer-address">
+        <p>
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          {{ site.address.line1 }}<br>{{ site.address.line2 }}
+        </p>
+        <a href="{{ site.phoneHref }}">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016.09 17.91l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          {{ site.phone }}
+        </a>
+        <a href="mailto:{{ site.email }}">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          {{ site.email }}
+        </a>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; {{ "now" | currentYear }} Signature Therapeutic Wellness. All rights reserved.</p>
+    <div class="flex gap-6">
+      {% for link in site.footerLinks %}
+      <a href="{{ link.href }}" class="!mb-0 hover:text-blue-300 transition-colors">{{ link.label }}</a>
+      {% endfor %}
     </div>
   </div>
 </footer>

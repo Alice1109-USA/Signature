@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <script>document.documentElement.classList.add('js')</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | {{ site.shortName }}</title>
@@ -22,8 +21,8 @@
   <script type="application/ld+json">{{ schema | dump | safe }}</script>
   {% endif %}
 </head>
-<body class="grain">
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-espresso-600 focus:text-cream-50 focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+<body>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[200] focus:bg-navy-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
 
   {% include "nav.njk" %}
 
