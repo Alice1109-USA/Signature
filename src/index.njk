@@ -1,0 +1,275 @@
+---
+layout: base.njk
+title: Massage Therapy & Wellness in Redmond, WA
+description: Signature Therapeutic Wellness offers personalized, insurance-covered massage therapy in Redmond, WA — Swedish, deep tissue, pain relief, lymphatic detox, and facial care.
+schema:
+  "@context": "https://schema.org"
+  "@type": "HealthAndBeautyBusiness"
+  name: "Signature Therapeutic Wellness"
+  telephone: "+1-206-384-3379"
+  email: "sigtherapeutics@gmail.com"
+  address:
+    "@type": "PostalAddress"
+    streetAddress: "2535 152nd Ave NE, Suite B1"
+    addressLocality: "Redmond"
+    addressRegion: "WA"
+    postalCode: "98052"
+    addressCountry: "US"
+  url: "https://www.signaturetherapeuticwellness.com"
+---
+<section class="relative overflow-hidden pt-40 pb-24 sm:pt-52 sm:pb-32">
+  <div class="pointer-events-none absolute -top-32 right-[-10%] h-[32rem] w-[32rem] rounded-full bg-sage-200/40 blur-3xl"></div>
+  <div class="pointer-events-none absolute top-40 left-[-15%] h-[24rem] w-[24rem] rounded-full bg-gold-300/30 blur-3xl"></div>
+
+  <div class="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-12">
+    <div class="reveal lg:col-span-6">
+      <p class="eyebrow">Redmond, Washington</p>
+      <h1 class="mt-6 text-[2.75rem] leading-[1.05] sm:text-6xl">
+        Discover the <span class="italic text-sage-600">power</span> of massage therapy.
+      </h1>
+      <p class="mt-7 max-w-md text-[1.1rem] leading-relaxed text-espresso-500">
+        Professional, patient-centered massage therapy and wellness care — dedicated to relaxation, pain relief, and improved mobility.
+      </p>
+      <div class="mt-10 flex flex-wrap items-center gap-3">
+        <a href="{{ site.bookUrl }}" target="_blank" rel="noopener" class="group btn-primary">
+          Book an Appointment
+          <span class="btn-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+        <a href="/insurance-accepted-massage/" class="group btn-outline">Insurance Accepted</a>
+      </div>
+    </div>
+
+    <div class="reveal lg:col-span-6">
+      <div class="relative">
+        <div class="shell -rotate-1">
+          <div class="shell-core overflow-hidden">
+            <img src="/images/home-hero.jpg" alt="Therapeutic hot stone massage treatment" class="h-[420px] w-full object-cover sm:h-[540px]" loading="eager">
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -left-6 hidden sm:block">
+          <div class="shell">
+            <div class="shell-core px-6 py-4">
+              <p class="font-serif text-sm text-espresso-700">Licensed &amp; In-Network</p>
+              <p class="mt-0.5 text-xs text-espresso-500">Massage Therapy Clinic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 py-24 sm:py-32">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 lg:grid-cols-12">
+    <div class="reveal lg:col-span-5">
+      <div class="shell rotate-1">
+        <div class="shell-core overflow-hidden">
+          <img src="/images/about-trust.jpg" alt="Massage therapist providing a back treatment" class="h-[420px] w-full object-cover" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="reveal lg:col-span-7">
+      <p class="eyebrow">About Us</p>
+      <h2 class="mt-5 text-3xl sm:text-4xl leading-[1.12]">Dedicated to enhancing your overall well-being.</h2>
+      <p class="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-espresso-500">
+        Through the power of therapeutic massage, we offer personalized, patient-centered care focused on relaxation, pain relief, and improved mobility — tailored to what your body needs.
+      </p>
+      <p class="mt-4 max-w-xl leading-relaxed text-espresso-500">
+        We accept coverage for muscle pain, joint discomfort, chronic tension, and functional limitations. New clients are welcome to email their insurance card ahead of their first visit for verification.
+      </p>
+      <a href="/insurance-accepted-massage/" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-sage-600 transition-colors hover:text-sage-500">
+        Learn about insurance coverage
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-24 sm:pb-32">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal max-w-xl">
+      <p class="eyebrow">How We Help</p>
+      <h2 class="mt-5 text-3xl sm:text-4xl">Care built around your body's needs.</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      {% set benefits = [
+        { title: "Stress &amp; Pain Relief", body: "Gentle to firm techniques that calm the nervous system, ease tension, and reduce everyday discomfort.", image: "pain-relief-hero.jpg" },
+        { title: "Injury Recovery", body: "Medical and PIP/L&amp;I massage that supports your body's natural healing after an accident or work injury.", image: "benefit-injury-recovery.jpg" },
+        { title: "Wellness Maintenance", body: "Ongoing therapeutic care to maintain circulation, flexibility, and long-term balance in body and mind.", image: "benefit-wellness-maintenance.jpg" }
+      ] %}
+      {% for b in benefits %}
+      <div class="reveal shell" style="transition-delay: {{ loop.index0 * 90 }}ms">
+        <div class="shell-core overflow-hidden">
+          <img src="/images/{{ b.image }}" alt="" class="h-52 w-full object-cover">
+          <div class="p-7">
+            <h3 class="text-xl">{{ b.title | safe }}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-espresso-500">{{ b.body | safe }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-24 sm:pb-32">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal flex flex-wrap items-end justify-between gap-6">
+      <div class="max-w-xl">
+        <p class="eyebrow">Our Services</p>
+        <h2 class="mt-5 text-3xl sm:text-4xl">Every treatment, tailored to you.</h2>
+      </div>
+      <a href="/price/" class="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-sage-600 transition-colors hover:text-sage-500">
+        View pricing
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {% set services = [
+        { label: "Swedish Massage", href: "/swedish-massage/" },
+        { label: "Deep Tissue Massage", href: "/deep-tissue-massage/" },
+        { label: "Pain Relief Massage", href: "/pain-relief-massage/" },
+        { label: "Lymphatic Detox Massage", href: "/lymphatic-detox-massage/" },
+        { label: "Facial & Skin Care", href: "/facial-skincare/" },
+        { label: "PIP/L&I Injury Massage", href: "/pip-li-injury-massage/" },
+        { label: "Insurance-Covered Massage", href: "/insurance-coveredmassage/" }
+      ] %}
+      {% for s in services %}
+      <a href="{{ s.href }}" class="reveal group shell" style="transition-delay: {{ loop.index0 * 60 }}ms">
+        <div class="shell-core flex items-center justify-between p-6">
+          <span class="text-espresso-700">{{ s.label }}</span>
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-espresso-600/5 transition-transform duration-500 ease-fluid group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-sage-100">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-24 sm:pb-32">
+  <div class="mx-auto max-w-6xl reveal">
+    <p class="eyebrow">Conditions We Treat</p>
+    <h2 class="mt-5 max-w-xl text-3xl sm:text-4xl">Targeted relief for common pain points.</h2>
+    <div class="mt-10 flex flex-wrap gap-3">
+      {% set conditions = [
+        { label: "Neck & Shoulder Pain", href: "/neck-shoulder-pain/" },
+        { label: "Back & Lower Back Pain", href: "/lower-back-pain/" },
+        { label: "Hips & Legs Pain", href: "/hips-legs-pain/" },
+        { label: "Manual Lymphatic Drainage", href: "/manual-lymphatic-drainage/" }
+      ] %}
+      {% for c in conditions %}
+      <a href="{{ c.href }}" class="rounded-full px-5 py-3 text-sm font-medium text-espresso-600 ring-1 ring-espresso-600/15 transition-all duration-500 ease-fluid hover:ring-espresso-600/40 hover:bg-espresso-600/5">{{ c.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-24 sm:pb-32">
+  <div class="mx-auto max-w-6xl">
+    <div class="reveal max-w-xl">
+      <p class="eyebrow">Client Stories</p>
+      <h2 class="mt-5 text-3xl sm:text-4xl">Real relief, real words.</h2>
+    </div>
+    <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
+      {% set testimonials = [
+        { initials: "LS", name: "Linda S.", quote: "I have never felt more relaxed. The massage therapy transformed my life." },
+        { initials: "DM", name: "David M.", quote: "A truly professional approach — I felt cared for from the moment I walked in." },
+        { initials: "ET", name: "Emily T.", quote: "My mobility has noticeably improved since I started coming here regularly." }
+      ] %}
+      {% for t in testimonials %}
+      <div class="reveal shell" style="transition-delay: {{ loop.index0 * 90 }}ms">
+        <div class="shell-core p-7">
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-sage-100 font-serif text-sm text-sage-600">{{ t.initials }}</div>
+          <p class="mt-5 text-[0.95rem] leading-relaxed text-espresso-600">&ldquo;{{ t.quote }}&rdquo;</p>
+          <p class="mt-4 text-sm text-espresso-400">{{ t.name }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="px-6 pb-24 sm:pb-32">
+  <div class="mx-auto max-w-6xl">
+    <div class="grid grid-cols-1 gap-14 lg:grid-cols-12">
+      <div class="reveal lg:col-span-5">
+        <p class="eyebrow">Get In Touch</p>
+        <h2 class="mt-5 text-3xl sm:text-4xl leading-[1.12]">Questions before you book?</h2>
+        <p class="mt-6 max-w-sm leading-relaxed text-espresso-500">
+          Send us a message and we'll get back to you — or call us directly at
+          <a href="{{ site.phoneHref }}" class="text-sage-600 underline underline-offset-4">{{ site.phone }}</a>.
+        </p>
+      </div>
+      <div class="reveal lg:col-span-7">
+        <div class="shell">
+          <div class="shell-core p-6 sm:p-9">
+            <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="New inquiry from signaturetherapeuticwellness.com">
+              <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+              <div class="sm:col-span-1">
+                <label for="name" class="text-xs uppercase tracking-[0.15em] text-espresso-400">Name</label>
+                <input id="name" name="name" type="text" required class="mt-2 w-full rounded-xl border-0 bg-espresso-600/5 px-4 py-3 text-espresso-700 placeholder:text-espresso-400 focus:outline-none focus:ring-2 focus:ring-sage-400">
+              </div>
+              <div class="sm:col-span-1">
+                <label for="email" class="text-xs uppercase tracking-[0.15em] text-espresso-400">Email</label>
+                <input id="email" name="email" type="email" required class="mt-2 w-full rounded-xl border-0 bg-espresso-600/5 px-4 py-3 text-espresso-700 placeholder:text-espresso-400 focus:outline-none focus:ring-2 focus:ring-sage-400">
+              </div>
+              <div class="sm:col-span-2">
+                <label for="phone" class="text-xs uppercase tracking-[0.15em] text-espresso-400">Phone (optional)</label>
+                <input id="phone" name="phone" type="tel" class="mt-2 w-full rounded-xl border-0 bg-espresso-600/5 px-4 py-3 text-espresso-700 placeholder:text-espresso-400 focus:outline-none focus:ring-2 focus:ring-sage-400">
+              </div>
+              <div class="sm:col-span-2">
+                <label for="message" class="text-xs uppercase tracking-[0.15em] text-espresso-400">Message</label>
+                <textarea id="message" name="message" rows="4" required class="mt-2 w-full rounded-xl border-0 bg-espresso-600/5 px-4 py-3 text-espresso-700 placeholder:text-espresso-400 focus:outline-none focus:ring-2 focus:ring-sage-400"></textarea>
+              </div>
+              <div class="sm:col-span-2">
+                <button type="submit" class="group btn-primary w-full justify-center sm:w-auto">
+                  Send Message
+                  <span class="btn-icon"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-28">
+  <div class="mx-auto max-w-6xl reveal">
+    <div class="rounded-[2.5rem] bg-espresso-600 px-8 py-16 sm:px-16">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div>
+          <h2 class="text-cream-50 text-3xl sm:text-4xl">Visit the studio.</h2>
+          <p class="mt-4 max-w-sm text-cream-100/70">Walk-ins by availability — appointments recommended.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="{{ site.bookUrl }}" target="_blank" rel="noopener" class="group btn-primary bg-gold-500 hover:bg-gold-600 text-espresso-700">
+              Book Now
+              <span class="btn-icon bg-espresso-700/10"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </a>
+          </div>
+        </div>
+        <div class="space-y-5 text-cream-100/80">
+          <a href="{{ site.address.mapsUrl }}" target="_blank" rel="noopener" class="block transition-colors hover:text-gold-300">
+            <span class="block text-xs uppercase tracking-[0.2em] text-cream-100/40">Address</span>
+            <span class="mt-1 block text-lg font-serif text-cream-50">{{ site.address.line1 }}, {{ site.address.line2 }}</span>
+          </a>
+          <a href="{{ site.phoneHref }}" class="block transition-colors hover:text-gold-300">
+            <span class="block text-xs uppercase tracking-[0.2em] text-cream-100/40">Phone</span>
+            <span class="mt-1 block text-lg font-serif text-cream-50">{{ site.phone }}</span>
+          </a>
+          <a href="mailto:{{ site.email }}" class="block transition-colors hover:text-gold-300">
+            <span class="block text-xs uppercase tracking-[0.2em] text-cream-100/40">Email</span>
+            <span class="mt-1 block text-lg font-serif text-cream-50">{{ site.email }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

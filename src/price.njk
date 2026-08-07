@@ -1,0 +1,84 @@
+---
+layout: base.njk
+permalink: /price/
+title: Massage Pricing
+description: Full pricing for massage therapy and facial treatments at Signature Therapeutic Wellness in Redmond, WA.
+---
+<section class="relative overflow-hidden pt-40 pb-20 sm:pt-48">
+  <div class="mx-auto max-w-4xl px-6 text-center reveal">
+    <p class="eyebrow mx-auto">Pricing</p>
+    <h1 class="mt-5 text-4xl sm:text-5xl">Simple, transparent pricing.</h1>
+    <p class="mx-auto mt-6 max-w-xl text-[1.05rem] leading-relaxed text-espresso-500">
+      Every session is tailored to you. Insurance may cover part or all of your visit — see our
+      <a href="/insurance-accepted-massage/" class="text-sage-600 underline underline-offset-4">insurance page</a> for details.
+    </p>
+  </div>
+</section>
+
+<section class="px-6 pb-16">
+  <div class="mx-auto max-w-3xl reveal">
+    <div class="shell">
+      <div class="shell-core p-8 sm:p-12">
+        {% set groups = [
+          { name: "PIP/L&I Injury Massage", rows: [ { label: "60 Min", price: "$160" } ] },
+          { name: "Swedish Massage", rows: [ { label: "60 Min", price: "$95" }, { label: "90 Min", price: "$135" }, { label: "120 Min", price: "$165" } ] },
+          { name: "Deep Tissue Massage", rows: [ { label: "60 Min", price: "$105" }, { label: "90 Min", price: "$155" }, { label: "120 Min", price: "$205" } ] },
+          { name: "Lymphatic Detox Massage", rows: [ { label: "90 Min", price: "$155" } ] },
+          { name: "Lomi Lomi Massage", rows: [ { label: "60 Min", price: "$125" }, { label: "90 Min", price: "$175" } ] },
+          { name: "Pain Relief Massage", rows: [ { label: "60 Min · Cupping + Pain Relief Cream", price: "$145" }, { label: "90 Min · Cupping + Pain Relief Cream", price: "$185" } ] },
+          { name: "Facial Services", rows: [ { label: "50 Min Urban Facial", price: "$95" }, { label: "70 Min Deep Cleaning Facial", price: "$135" }, { label: "70 Min Hydrating Facial", price: "$135" }, { label: "90 Min Luxury Facial", price: "$165" } ] }
+        ] %}
+        {% for group in groups %}
+        <div class="{% if not loop.first %}mt-9 pt-9 border-t border-espresso-600/10{% endif %}">
+          <h2 class="text-xl">{{ group.name }}</h2>
+          <div class="mt-3 divide-y divide-espresso-600/10">
+            {% for row in group.rows %}
+            <div class="flex items-center justify-between py-3">
+              <span class="text-espresso-500">{{ row.label }}</span>
+              <span class="font-serif text-lg text-espresso-700">{{ row.price }}</span>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-28">
+  <div class="mx-auto max-w-3xl reveal">
+    <p class="eyebrow">Add-Ons</p>
+    <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {% set addons = [
+        { label: "Hot Stone Treatment", price: "Included" },
+        { label: "Pain Relief Oil", price: "$20" },
+        { label: "CBD", price: "$30" },
+        { label: "Cupping", price: "$20" }
+      ] %}
+      {% for a in addons %}
+      <div class="shell">
+        <div class="shell-core p-5 text-center">
+          <p class="text-sm text-espresso-500">{{ a.label }}</p>
+          <p class="mt-2 font-serif text-lg text-espresso-700">{{ a.price }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="px-6 pb-28">
+  <div class="mx-auto max-w-6xl reveal">
+    <div class="rounded-[2.5rem] bg-espresso-600 px-8 py-14 text-center sm:px-16 sm:py-16">
+      <h2 class="text-cream-50 text-3xl sm:text-4xl">Ready to book?</h2>
+      <p class="mx-auto mt-4 max-w-xl text-cream-100/70">Reserve your session online or give us a call at {{ site.phone }}.</p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="{{ site.bookUrl }}" target="_blank" rel="noopener" class="group btn-primary bg-gold-500 hover:bg-gold-600 text-espresso-700">
+          Book Now
+          <span class="btn-icon bg-espresso-700/10"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

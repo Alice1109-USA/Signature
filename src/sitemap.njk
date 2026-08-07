@@ -1,0 +1,20 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% set pages = [
+  "/", "/price/", "/insurance-accepted-massage/",
+  "/pip-li-injury-massage/", "/insurance-coveredmassage/", "/swedish-massage/",
+  "/deep-tissue-massage/", "/pain-relief-massage/", "/lymphatic-detox-massage/",
+  "/facial-skincare/", "/neck-shoulder-pain/", "/lower-back-pain/",
+  "/hips-legs-pain/", "/manual-lymphatic-drainage/",
+  "/privacy-policy/", "/accessibility-statement/"
+] %}
+{% for p in pages %}
+  <url>
+    <loc>{{ site.url }}{{ p }}</loc>
+  </url>
+{% endfor %}
+</urlset>

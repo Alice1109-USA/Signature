@@ -1,0 +1,34 @@
+---
+layout: service.njk
+permalink: /insurance-accepted-massage/
+title: Insurance Accepted
+description: Learn how insurance coverage works at Signature Therapeutic Wellness, including in-network billing and Superbills for out-of-network plans.
+eyebrow: Insurance
+heroImage: insurance-accepted-hero.jpg
+heroAlt: Massage therapist reviewing treatment notes with a client
+intro: We accept coverage for muscle pain, joint discomfort, chronic tension, and functional limitations. New clients are welcome to email their insurance card ahead of their first visit for verification.
+---
+<h2 class="text-2xl sm:text-3xl">How Insurance Coverage Works</h2>
+<p class="mt-5 leading-relaxed text-espresso-500">
+  For in-network plans, we handle all administrative work on your behalf. If you're out-of-network, we'll provide a Superbill so you can file a claim directly with your insurer.
+</p>
+<p class="mt-4 leading-relaxed text-espresso-500">
+  Even with in-network status, individual plans may have restrictions such as visit limits, prior authorization requirements, or referral needs. While we attempt to verify your benefits beforehand, your insurance company makes the final payment determination. We are currently in the process of credentialing with additional insurance providers.
+</p>
+
+<div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+  {% set steps = [
+    { n: "01", t: "Email your insurance card", d: "Send a photo or copy of your insurance card before your first appointment." },
+    { n: "02", t: "We verify your coverage", d: "For in-network plans, we handle verification and billing directly." },
+    { n: "03", t: "Superbill if out-of-network", d: "We provide a Superbill so you can self-submit your claim." }
+  ] %}
+  {% for s in steps %}
+  <div class="shell">
+    <div class="shell-core p-6">
+      <span class="font-serif text-sm text-gold-500">{{ s.n }}</span>
+      <h3 class="mt-2 text-base">{{ s.t }}</h3>
+      <p class="mt-2 text-sm leading-relaxed text-espresso-500">{{ s.d }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

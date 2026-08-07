@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-espresso-600 font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif text-espresso-700;
+  }
+}
+
+@layer components {
+  .grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 40;
+    opacity: 0.035;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-sage-600 bg-sage-50 ring-1 ring-sage-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-3 rounded-full bg-espresso-600 pl-6 pr-2 py-2 text-cream-50 font-medium transition-all duration-500 ease-fluid hover:bg-espresso-700 active:scale-[0.98];
+  }
+  .btn-primary .btn-icon {
+    @apply flex h-9 w-9 items-center justify-center rounded-full bg-cream-50/15 transition-transform duration-500 ease-fluid group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-3 rounded-full ring-1 ring-espresso-600/25 pl-6 pr-2 py-2 text-espresso-600 font-medium transition-all duration-500 ease-fluid hover:ring-espresso-600/50 active:scale-[0.98];
+  }
+  .btn-outline .btn-icon {
+    @apply flex h-9 w-9 items-center justify-center rounded-full bg-espresso-600/5 transition-transform duration-500 ease-fluid group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-105;
+  }
+
+  .shell {
+    @apply rounded-[2rem] bg-espresso-600/5 ring-1 ring-espresso-600/10 p-2;
+  }
+  .shell-core {
+    @apply rounded-[calc(2rem-0.375rem)] bg-cream-50 shadow-inner-hi;
+  }
+
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(2.5rem);
+    filter: blur(6px);
+    transition: opacity 900ms cubic-bezier(0.32, 0.72, 0, 1), transform 900ms cubic-bezier(0.32, 0.72, 0, 1), filter 900ms cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
