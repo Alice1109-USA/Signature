@@ -1,0 +1,531 @@
+:root {
+  --radius-panel: 16px;
+  --radius-control: 10px;
+  --palette-plum: #362645;
+  --palette-purple: #4A3558;
+  --palette-mist: #F3EFF6;
+  --palette-cream: #FAF7F4;
+  --palette-gold: #C9A96E;
+  --palette-muted: #5E5E5E;
+  --palette-paper: #FFFFFF;
+  --palette-ink: #1C1410;
+  --palette-line: #E8E4E0;
+  --palette-blush: #F5EDE6;
+  --palette-on-dark: #F3EFF6;
+  --palette-gold-light: #E8D5B0;
+  --palette-control-border: #8A7C91;
+}
+
+/* Shared rounded surfaces across all pages; full-width sections stay edge-to-edge. */
+.service-card,
+.facial-card,
+.facial-featured,
+.sidebar-book,
+.sidebar-card,
+.benefit-item,
+.insurance-tip,
+.save-tip,
+.notice-box,
+.step,
+.pricing-table,
+.home-visit-panel,
+.head-spa-option,
+.nav-drop-menu,
+.about-img-1,
+.about-img-2,
+.head-spa-feature > img,
+.gift-page .gift-card-visual,
+.gift-page .feature-img {
+  border-radius: var(--radius-panel) !important;
+}
+.service-card,
+.facial-card,
+.facial-featured,
+.pricing-table,
+.about-img-1,
+.about-img-2 { overflow: hidden; }
+.form-group input,
+.form-group textarea,
+.form-status,
+.pillar-icon,
+.contact-icon { border-radius: var(--radius-control) !important; }
+
+body { background: var(--palette-cream) !important; color: var(--palette-ink); }
+/* SEO matrix navigation: category links and independent disclosure controls. */
+.nav-category { position: relative; display: flex; align-items: center; gap: .1rem; }
+.nav .nav-category > .nav-category-link {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: white; font-size: .67rem; font-weight: 500; letter-spacing: .16em;
+}
+.nav.scrolled .nav-category > .nav-category-link { color: var(--palette-purple); }
+.nav-category .nav-drop { position: static; }
+.nav-category .nav-drop > summary { display: flex; justify-content: center; width: 32px; min-height: 44px; padding: 0; }
+.nav-category a:focus-visible, .nav-category summary:focus-visible,
+.mobile-category a:focus-visible, .mobile-category summary:focus-visible {
+  outline: 2px solid currentColor; outline-offset: 3px;
+}
+.mobile-category { position: relative; margin-top: 1.25rem; }
+.mobile-category > .mobile-category-link {
+  display: flex; align-items: center; min-height: 48px; padding-right: 52px;
+  color: var(--palette-purple); font-weight: 600;
+}
+.mobile-category .mobile-service-drop { margin-top: 0; }
+.mobile-category .mobile-service-drop > summary {
+  position: absolute; top: 0; right: 0; width: 48px; justify-content: center;
+}
+.mobile-category .mobile-service-drop > summary::after { margin: 0; }
+.seo-reading { max-width: 72rem; }
+.seo-reading p, .seo-page .page-layout-content p { line-height: 1.8; margin-bottom: 1.1rem; max-width: 72ch; }
+.seo-reading .treatment-section, .seo-page .treatment-section { margin-bottom: 2.75rem; }
+.seo-reading h2, .seo-page .page-layout-content h2 { line-height: 1.35; margin-top: 2rem; margin-bottom: 1rem; }
+.seo-reading .treatment-section:first-child h2, .seo-page .treatment-section:first-child h2 { margin-top: 0; }
+.seo-faq summary { min-height: 48px; line-height: 1.6; }
+.seo-faq details p { margin-top: .75rem; margin-bottom: .5rem; }
+.seo-reading p a, .seo-page .page-layout-content p a { text-decoration: underline; text-underline-offset: .2em; color: var(--palette-purple); }
+.seo-page-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.5rem; }
+.seo-page-cta > a:not(.btn) { text-decoration: underline; text-underline-offset: .2em; }
+.seo-page-cta .btn { white-space: normal; text-align: center; }
+@media (max-width: 768px) {
+  .seo-page-cta { align-items: stretch; }
+  .seo-page-cta .btn { width: 100%; }
+  .seo-reading p, .seo-page .page-layout-content p { line-height: 1.75; }
+}
+.home-visit-panel { max-width: 68rem; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3.5rem); background: var(--palette-paper); border: 1px solid var(--palette-line); border-radius: 16px; }
+.home-visit-panel h2 { color: var(--palette-purple); font-size: clamp(1.7rem, 3.4vw, 2.7rem); line-height: 1.2; text-wrap: balance; }
+.home-visit-panel p, .home-visit-panel li { color: var(--palette-muted); font-size: .95rem; line-height: 1.8; }
+.home-visit-panel p { max-width: 72ch; margin-bottom: 1.25rem; }
+.home-visit-panel strong { color: var(--palette-ink); font-weight: 600; }
+.home-visit-panel ul { list-style: disc; padding-left: 1.25rem; margin: 1.5rem 0 2rem; }
+.home-visit-panel li { margin-bottom: .65rem; }
+.home-visit-panel li a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .2em; }
+.home-visit-actions { gap: .75rem; }
+.all-services-link { margin-top: 2.5rem; text-align: center; }
+.services-intro { padding-top: 9rem; }
+.services-intro h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+.services-intro p { color: var(--palette-muted); }
+.service-category-links { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 1.5rem; }
+.service-category-links a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .3em; }
+.all-services-group { scroll-margin-top: 90px; }
+.all-services-group:nth-of-type(even) { background: var(--palette-mist); }
+
+/* Non-navigating native disclosures for the two service categories. */
+.nav-drop > summary { display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; cursor: pointer; list-style: none; white-space: nowrap; font-size: .67rem; font-weight: 500; letter-spacing: .16em; color: #fff; }
+.nav-drop > summary::-webkit-details-marker, .mobile-service-drop > summary::-webkit-details-marker { display: none; }
+.nav.scrolled .nav-drop > summary { color: var(--palette-purple); }
+.nav-drop[open] > summary svg { transform: rotate(180deg); }
+.nav .nav-drop:not([open]) > .nav-drop-menu { display: none !important; }
+.nav .nav-drop[open] > .nav-drop-menu { display: block !important; opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateX(-50%) translateY(0) !important; }
+.mobile-service-drop > summary { cursor: pointer; display: flex; align-items: center; justify-content: space-between; min-height: 48px; color: var(--palette-purple); font-weight: 600; list-style: none; }
+.mobile-service-drop > summary::after { content: ''; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); margin-right: .5rem; }
+.mobile-service-drop[open] > summary::after { transform: rotate(225deg); }
+.mobile-service-drop > div { padding: .5rem 0 1rem; }
+/* Category overview above a visibly subordinate list of treatments. */
+.nav .nav-drop-menu .service-overview-link,
+.mobile-service-drop .service-overview-link {
+  display: block;
+  margin: 0 .65rem .75rem;
+  padding: .85rem .9rem !important;
+  border-radius: 10px;
+  background: var(--palette-mist) !important;
+  color: var(--palette-plum) !important;
+  font-size: .95rem !important;
+  font-weight: 600 !important;
+}
+.service-submenu-label {
+  display: block;
+  padding: .3rem 1.55rem .5rem;
+  color: var(--palette-muted);
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.service-submenu { list-style: none; margin: 0; padding: 0; }
+.nav .service-submenu a,
+.mobile-service-drop .service-submenu a {
+  display: block;
+  margin: 0;
+  padding: .7rem 1.35rem .7rem 2.25rem !important;
+  font-size: .8rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5;
+}
+.nav .service-submenu a:hover,
+.nav .service-submenu a:focus-visible,
+.mobile-service-drop .service-submenu a:hover,
+.mobile-service-drop .service-submenu a:focus-visible {
+  background: var(--palette-mist) !important;
+  padding-left: 2.25rem !important;
+}
+
+/* Homepage service overview and collapsible FAQ. */
+.home-spa-services, .home-faq { background: var(--palette-mist); }
+.home-section-heading { margin-bottom: 2rem; }
+.home-section-heading h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); margin-bottom: 1rem; }
+.home-section-heading p { color: var(--palette-muted); max-width: 68ch; }
+.home-spa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.home-spa-grid .service-card { display: flex; flex-direction: column; border-radius: 12px; }
+.home-spa-grid .service-body { flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
+.home-spa-grid .service-link { margin-top: auto; }
+.home-spa-grid .service-img { height: auto; aspect-ratio: 4 / 3; }
+#massage-services { scroll-margin-top: 110px; }
+.home-faq-list { max-width: 75ch; }
+.home-faq-item { border-bottom: 1px solid rgba(74,53,88,.2); }
+.home-faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 48px; padding: 1.25rem 0; cursor: pointer; list-style: none; font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; color: var(--palette-purple); }
+.home-faq-item summary::-webkit-details-marker { display: none; }
+.home-faq-item summary:hover { color: var(--palette-plum); }
+.home-faq-item summary:focus-visible { outline: 2px solid var(--palette-purple); outline-offset: 4px; }
+.home-faq-item .faq-chevron { flex-shrink: 0; }
+.home-faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.home-faq-item p { color: var(--palette-muted); padding-bottom: 1.5rem; }
+.home-faq-item a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .25em; }
+@media (max-width: 1000px) { .home-spa-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) { .home-spa-grid { grid-template-columns: 1fr; } }
+
+/* Head Spa imagery and service structure adapted from the supplied reference. */
+.head-spa-hero { min-height: 520px; }
+.head-spa-hero .btn { margin-top: 1.25rem; }
+.head-spa-soft { background: var(--palette-mist); }
+.head-spa-feature { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; }
+.head-spa-feature > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
+.head-spa-feature h2, .head-spa-reading h2, #head-spa-services h2, .head-spa-soft h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1.25rem; }
+.head-spa-feature p, .head-spa-reading p, .head-spa-intro { color: var(--palette-muted); margin-bottom: 1.25rem; }
+.head-spa-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.head-spa-option { background: var(--palette-paper); border-radius: 12px; overflow: hidden; scroll-margin-top: 110px; }
+.head-spa-option > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.head-spa-option > div { padding: 1.5rem; }
+.head-spa-option h3, .head-spa-guide h3 { font-size: 1.25rem; margin-bottom: .75rem; }
+.head-spa-option p, .head-spa-guide p { color: var(--palette-muted); margin-bottom: 1rem; }
+.head-spa-option a, .head-spa-reading a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .25em; }
+.head-spa-guide { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.head-spa-list { list-style: disc; padding-left: 1.25rem; margin-bottom: 1.25rem; color: var(--palette-muted); }
+.head-spa-list li { margin-bottom: .5rem; }
+.head-spa-reading { max-width: 78rem; }
+.head-spa-reading > h2:not(:first-child) { margin-top: 2.5rem; }
+#head-spa-services { scroll-margin-top: 90px; }
+@media (max-width: 1000px) { .head-spa-options { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 768px) {
+  .head-spa-feature, .head-spa-options, .head-spa-guide { grid-template-columns: 1fr; }
+  .head-spa-hero { min-height: 560px; }
+}
+
+/* Fixed logo footprint leaves room for an evenly aligned desktop menu. */
+.nav-logo { width: clamp(160px, 17vw, 210px); }
+.nav-mark { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
+.footer-logo .footer-mark { width: 240px; max-width: 100%; height: auto; }
+.nav-links { flex: 1 0 auto; justify-content: center; gap: clamp(.65rem, 1.8vw, 1.75rem); }
+.nav-links > a, .nav-drop > a { min-height: 44px; display: inline-flex; align-items: center; }
+.treatment-section { margin-bottom: 2.5rem; }
+.service-reading-page .page-layout-content p { line-height: 1.8; margin: 0 0 1.1rem; max-width: 70ch; color: var(--palette-muted); }
+.service-reading-page .treatment-section { margin-bottom: 3rem; }
+.service-reading-page .treatment-section h2 { line-height: 1.35; }
+.service-reading-page .treatment-option h3 { line-height: 1.4; }
+.service-reading-page .treatment-option:focus-visible { outline: 2px solid var(--palette-purple); outline-offset: 4px; }
+.service-reading-page .page-layout-content .btn { white-space: normal; text-align: center; line-height: 1.5; }
+.nav .nav-drop-menu { max-height: min(70vh, 36rem); overflow-y: auto; overscroll-behavior: contain; }
+/* Reading rhythm for prescription and insurance information only. */
+.insurance-massage-page .page-layout-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 70ch;
+  margin: 0 0 1.1rem;
+}
+.insurance-massage-page .treatment-section { margin-bottom: 3rem; }
+.insurance-massage-page .treatment-section > :last-child { margin-bottom: 0; }
+.insurance-massage-page .page-section-title { line-height: 1.35; }
+.insurance-massage-page .benefit-title { line-height: 1.5; margin-bottom: .5rem; }
+.insurance-massage-page .benefit-desc { line-height: 1.8; }
+.insurance-massage-page .benefits-grid { margin-bottom: 3rem; row-gap: 1.5rem; }
+.insurance-massage-page .insurance-intake {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: var(--radius-panel);
+  background: var(--palette-mist);
+}
+.insurance-massage-page .insurance-intake .btn-row { margin: 1.5rem 0 1.25rem; }
+.insurance-massage-page .insurance-intake .btn { white-space: normal; text-align: center; line-height: 1.5; }
+.insurance-massage-page .treatment-section p a {
+  color: var(--palette-purple);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.insurance-massage-page .page-layout-sidebar p { line-height: 1.75; }
+.insurance-massage-page [id] { scroll-margin-top: 110px; }
+@media (max-width: 768px) {
+  .insurance-massage-page .treatment-section { margin-bottom: 2.25rem; }
+  .insurance-massage-page .page-layout-content p { line-height: 1.75; }
+}
+.treatment-section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 1rem; }
+.treatment-options { display: grid; gap: 0; }
+.treatment-option { padding: 1.5rem 0; border-bottom: 1px solid var(--palette-line); }
+.treatment-option h3 { color: var(--palette-purple); font-size: 1.25rem; margin-bottom: .65rem; }
+.treatment-option p { color: var(--palette-muted); margin-bottom: .65rem; }
+.treatment-option span { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .25em; }
+.treatment-faq details { padding: 1rem 0; border-bottom: 1px solid var(--palette-line); }
+.treatment-faq summary { cursor: pointer; font-weight: 500; }
+.treatment-faq details p { margin-top: .75rem; }
+@media (min-width: 769px) and (max-width: 1000px) {
+  .nav-cta .gift-link { display: none; }
+  .nav-logo { width: 160px; }
+  .nav-links { gap: .65rem; }
+}
+
+/* Keep the homepage benefit labels on one clean baseline. */
+.pillars {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  align-items: start;
+}
+.pillar .tag {
+  min-height: 1.2rem;
+  white-space: nowrap;
+}
+.nav,
+.nav-links,
+.nav-cta { flex-wrap: nowrap !important; }
+.nav-links > a,
+.nav-drop > a,
+.gift-link { white-space: nowrap; }
+
+.tag,
+.hero-tag,
+.service-link,
+.price,
+.facial-card-body .price,
+.gift-link:hover,
+.nav.scrolled .gift-link { color: var(--palette-purple) !important; }
+
+.hero h1 em { color: var(--palette-mist) !important; }
+.hero-tag { color: var(--palette-mist) !important; }
+
+.btn,
+.sidebar-book .btn { background-color: var(--palette-purple) !important; color: #fff !important; }
+.btn:hover,
+.sidebar-book .btn:hover { background-color: var(--palette-plum) !important; }
+
+.section[style*="#F6F8FC"],
+.section[style*="#fff"] { background: var(--palette-cream) !important; }
+.section[style*="#EDF2FA"],
+.cta-strip[style*="#EDF2FA"] { background: var(--palette-blush) !important; }
+
+/* Remove the cool blue-gray surfaces left in the compiled legacy stylesheet. */
+.nav.scrolled,
+.mobile-menu,
+.service-card,
+.facial-card,
+.benefit-item,
+.contact-form,
+.breadcrumb,
+.sidebar-card,
+.pricing-table-row,
+.step { background-color: var(--palette-paper) !important; }
+
+.pricing-table-row:nth-child(2n) { background-color: var(--palette-cream) !important; }
+
+.insurance-tip,
+.save-tip,
+.notice-box,
+.form-status.success { background-color: var(--palette-mist) !important; }
+
+.nav.scrolled,
+.mobile-menu > a,
+.breadcrumb,
+.intro-quote,
+.benefit-item,
+.sidebar-card,
+.pricing-table,
+.pricing-table-row,
+.pricing-row,
+.step,
+.form-group input,
+.form-group textarea { border-color: var(--palette-line) !important; }
+
+.divider { background-color: var(--palette-gold) !important; }
+.service-price-tag { background: var(--palette-gold) !important; color: var(--palette-plum) !important; }
+.pillar-icon,
+.contact-icon { background: var(--palette-mist) !important; color: var(--palette-purple) !important; }
+
+.insurance-bleed-content,
+.testimonial-strip,
+.footer { background-color: var(--palette-plum) !important; }
+.insurance-bleed-content .tag { color: var(--palette-mist) !important; }
+.footer-address svg { color: var(--palette-gold) !important; }
+
+.about-text h2 em,
+.contact-val a,
+.contact-val a:hover { color: var(--palette-purple) !important; }
+
+.benefit-check { background-color: var(--palette-mist) !important; }
+
+.nav.scrolled {
+  box-shadow: 0 1px 0 var(--palette-line), 0 8px 24px rgba(68, 51, 75, .08) !important;
+}
+
+.gift-link,
+.hover\:text-blue-300:hover,
+.footer-col a:hover,
+.footer-address a:hover,
+.footer-credit a:hover { color: var(--palette-mist) !important; }
+
+input:focus,
+textarea:focus { border-color: var(--palette-purple) !important; outline-color: var(--palette-purple) !important; }
+
+/* Refined service menu */
+.nav-drop > a {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .35rem;
+}
+.nav-drop > a svg {
+  transition: transform .2s ease;
+}
+.nav-drop:hover > a svg,
+.nav-drop:focus-within > a svg { transform: rotate(180deg); }
+.nav-drop-menu {
+  display: block !important;
+  min-width: 17rem !important;
+  padding: .7rem 0 !important;
+  border: 1px solid var(--palette-line) !important;
+  border-radius: 12px !important;
+  background: var(--palette-paper) !important;
+  box-shadow: 0 18px 48px rgba(68, 51, 75, .16) !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(8px) !important;
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+.nav-drop-menu a {
+  padding: .7rem 1.35rem !important;
+  color: var(--palette-plum) !important;
+  font-size: .78rem !important;
+  font-weight: 500 !important;
+  letter-spacing: .02em !important;
+  text-transform: none !important;
+  white-space: nowrap;
+}
+.nav-drop-menu a:first-child {
+  margin: 0 .65rem .35rem;
+  padding: .65rem .7rem !important;
+  border-bottom: none;
+  color: var(--palette-purple) !important;
+  font-weight: 600 !important;
+}
+.nav-drop-menu a:hover,
+.nav-drop-menu a:focus-visible {
+  padding-left: 1.55rem !important;
+  background: var(--palette-mist) !important;
+  color: var(--palette-plum) !important;
+}
+.nav-drop-menu a:first-child:hover,
+.nav-drop-menu a:first-child:focus-visible {
+  padding-left: .7rem !important;
+  background: transparent !important;
+  color: var(--palette-plum) !important;
+}
+
+.mobile-section-label {
+  color: var(--palette-purple) !important;
+  letter-spacing: .16em !important;
+}
+.mobile-menu > a {
+  color: var(--palette-plum) !important;
+  font-weight: 600;
+}
+
+/* La Belle reference palette, with readable text on both light and dark surfaces. */
+.pillar p, .service-body p, .facial-card-body p, .facial-card-body .dur,
+.about-text p, .stat p:last-child, .contact-val, .body-text,
+.benefit-desc, .pricing-row .label, .insurance-tip p, .related-list a,
+.cta-strip p, .pricing-table-row .name, .step p, .notice-box li,
+.save-tip p, .breadcrumb, .breadcrumb a,
+[style*="color:#5B6472"], [style*="color: #5B6472"] {
+  color: var(--palette-muted) !important;
+}
+.facial-card-body .dur { opacity: 1; }
+.tag, .hero-tag { font-weight: 600; }
+.service-hero .tag, .facial-featured-body .tag,
+.hero .tag, .hero-tag { color: var(--palette-mist) !important; }
+.sidebar-book, .pricing-table-head { background: var(--palette-purple) !important; }
+.sidebar-book .btn { background: var(--palette-paper) !important; color: var(--palette-purple) !important; }
+.sidebar-book .btn:hover { background: var(--palette-mist) !important; }
+.footer, .footer-brand p, .footer-col a, .footer-address a,
+.footer-address p, .footer-bottom p, .footer-credit p,
+.sidebar-book p, .sidebar-book-note, .sidebar-book-note a,
+.testimonial-strip cite, .pricing-table-head span {
+  color: var(--palette-mist) !important;
+}
+.footer-col h4, .footer-credit a { color: #fff !important; }
+.nav.scrolled .nav-links > a, .nav.scrolled .nav-drop > a {
+  color: var(--palette-purple) !important;
+}
+.nav-links > a:hover, .nav-drop > a:hover { color: #fff !important; }
+.nav.scrolled .gift-link { color: var(--palette-purple) !important; }
+.insurance-bleed-img::after { background: rgba(54, 38, 69, .88); }
+.insurance-bleed-content { background-color: transparent !important; }
+.hero-img::after { background: linear-gradient(160deg, rgba(74,53,88,.35), transparent 40%, rgba(28,20,16,.88)); }
+.service-hero-img::after { background: linear-gradient(160deg, rgba(74,53,88,.4), transparent 40%, rgba(28,20,16,.9)); }
+.hero p, .service-hero p, .insurance-bleed p { color: #fff; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: var(--palette-muted); opacity: 1; }
+::selection { background: var(--palette-purple); color: #fff; }
+:focus-visible { outline: 2px solid var(--palette-purple); outline-offset: 4px; }
+.footer :focus-visible, .sidebar-book :focus-visible, .hero :focus-visible { outline-color: var(--palette-gold); }
+
+/* Shared component states: the same contrast rules on every route. */
+.hero h1 em, .insurance-bleed h2 em,
+.hero .hero-tag, .service-hero .tag, .facial-featured-body .tag {
+  color: var(--palette-gold-light) !important;
+}
+.facial-featured-overlay { background: linear-gradient(180deg, transparent, rgba(28,20,16,.94)); }
+.facial-featured-body p { color: #fff; }
+.nav:not(.scrolled) {
+  background: linear-gradient(180deg, rgba(28,20,16,.88), rgba(28,20,16,.72));
+}
+.nav:not(.scrolled) .nav-links > a,
+.nav:not(.scrolled) .nav-drop > a { color: #fff; }
+.nav:not(.scrolled) .gift-link { color: var(--palette-gold-light) !important; }
+.nav.scrolled .nav-links > a:hover,
+.nav.scrolled .nav-drop > a:hover { color: var(--palette-plum) !important; text-decoration: underline; text-underline-offset: .3em; }
+.btn-ghost:hover { color: var(--palette-purple) !important; background: var(--palette-paper); }
+.btn-outline { color: var(--palette-purple); border-color: var(--palette-purple); }
+.btn-outline:hover { background: var(--palette-purple); color: #fff; }
+.pillar:hover .pillar-icon { background: var(--palette-purple) !important; color: #fff !important; }
+.save-tip, .insurance-tip { border-left: 0; }
+.form-group input, .form-group textarea { border-color: var(--palette-control-border) !important; caret-color: var(--palette-purple); }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--palette-purple) !important; outline: 2px solid var(--palette-purple); outline-offset: 2px; }
+.form-status.error { background: #FBEDEC; color: #982B25; }
+.btn:disabled { background: #E8E4E0 !important; color: #5E5E5E !important; cursor: not-allowed; transform: none; }
+.footer-col a:hover, .footer-address a:hover, .footer-credit a:hover,
+.footer-bottom a:hover { color: var(--palette-gold-light) !important; text-decoration: underline; text-underline-offset: .25em; }
+.service-hero :focus-visible, .insurance-bleed :focus-visible,
+.nav:not(.scrolled) :focus-visible { outline-color: var(--palette-gold-light); }
+.nav-drop-menu :focus-visible { outline-color: var(--palette-purple) !important; }
+.scroll-indicator span, .hero-vert { color: var(--palette-on-dark); }
+html { scrollbar-color: #6B5580 var(--palette-cream); }
+
+@media (max-width: 1180px) and (min-width: 769px) {
+  .nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .nav-links { gap: 1rem; }
+  .nav-cta { gap: .65rem; }
+  .nav-btn { padding-left: 1rem !important; padding-right: 1rem !important; }
+}
+
+@media (max-width: 768px) {
+  input, textarea { font-size: 16px !important; }
+
+  .pillars {
+    display: flex !important;
+    gap: 1rem !important;
+    overflow-x: auto;
+    padding-bottom: .75rem;
+    scroll-snap-type: x proximity;
+    scrollbar-color: var(--palette-purple) transparent;
+  }
+  .pillar {
+    flex: 0 0 min(78vw, 18rem);
+    scroll-snap-align: start;
+  }
+}

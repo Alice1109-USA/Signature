@@ -2,7 +2,175 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/home", "destination": "/", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/massage-redmond-wa",
+      "destination": "/massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/massage-redmond-wa.html",
+      "destination": "/massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/swedish-massage",
+      "destination": "/swedish-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/swedish-massage.html",
+      "destination": "/swedish-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-tissue-massage",
+      "destination": "/deep-tissue-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-tissue-massage.html",
+      "destination": "/deep-tissue-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/pain-relief-massage",
+      "destination": "/pain-relief-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/pain-relief-massage.html",
+      "destination": "/pain-relief-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/insurance-coveredmassage",
+      "destination": "/insurance-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/insurance-coveredmassage.html",
+      "destination": "/insurance-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/prenatal-massage-redmond-wa",
+      "destination": "/prenatal-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/prenatal-massage-redmond-wa.html",
+      "destination": "/prenatal-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/postpartum-massage-redmond-wa",
+      "destination": "/postpartum-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/postpartum-massage-redmond-wa.html",
+      "destination": "/postpartum-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/couples-massage-redmond-wa",
+      "destination": "/couples-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/couples-massage-redmond-wa.html",
+      "destination": "/couples-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/lymphatic-detox-massage",
+      "destination": "/lymphatic-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/lymphatic-detox-massage.html",
+      "destination": "/lymphatic-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial-skincare",
+      "destination": "/facials-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial-skincare.html",
+      "destination": "/facials-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-cleaning-facial-redmond-wa",
+      "destination": "/deep-cleansing-facial-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-cleaning-facial-redmond-wa.html",
+      "destination": "/deep-cleansing-facial-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-hydration-facial-redmond-wa",
+      "destination": "/hydrating-facial-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-hydration-facial-redmond-wa.html",
+      "destination": "/hydrating-facial-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/lifting-anti-aging-facial-redmond-wa",
+      "destination": "/anti-aging-facial-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/lifting-anti-aging-facial-redmond-wa.html",
+      "destination": "/anti-aging-facial-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/head-spa-redmond-wa",
+      "destination": "/head-spa-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/head-spa-redmond-wa.html",
+      "destination": "/head-spa-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/price",
+      "destination": "/pricing",
+      "statusCode": 301
+    },
+    {
+      "source": "/price.html",
+      "destination": "/pricing",
+      "statusCode": 301
+    },
+    {
+      "source": "/pip-li-injury-massage",
+      "destination": "/insurance-massage-redmond#pip-li",
+      "statusCode": 301
+    },
+    {
+      "source": "/pip-li-injury-massage.html",
+      "destination": "/insurance-massage-redmond#pip-li",
+      "statusCode": 301
+    }
   ]
 }

@@ -23,8 +23,8 @@
 - Address: 2535 152nd Ave NE, Suite B1, Redmond, WA 98052
 - Phone: 206-384-3379
 - Email: sigtherapeutics@gmail.com
-- Booking & gift cards: Square (`https://app.squareup.com/gift/ML8XEWEKAC8YP/order` for gift cards;
-  same account for appointment booking)
+- Appointment booking: Square (`https://book.squareup.com/appointments/ruv6lje3z2m25r/location/LBCJ5N7KEN97H/services`)
+- Gift cards: Square (`https://app.squareup.com/gift/ML8XEWEKAC8YP/order`)
 - Insurance: in-network plans billed directly; out-of-network patients receive a Superbill.
   Currently in the process of credentialing with additional providers — do not name specific
   insurers as confirmed in-network without checking with the client first.

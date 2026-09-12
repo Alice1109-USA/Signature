@@ -6,6 +6,28 @@ if (nav) {
   }, { passive: true });
 }
 
+// Category text links open hub pages; adjacent native details disclose services.
+const serviceDrops = [...document.querySelectorAll('details.nav-drop, details.mobile-service-drop')];
+serviceDrops.forEach((drop) => {
+  drop.addEventListener('toggle', () => {
+    if (drop.open) serviceDrops.forEach((other) => {
+      if (other !== drop) other.open = false;
+    });
+  });
+});
+document.addEventListener('click', (event) => {
+  serviceDrops.forEach((drop) => {
+    if (!drop.contains(event.target)) drop.open = false;
+  });
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  serviceDrops.forEach((drop) => {
+    if (drop.open && drop.contains(document.activeElement)) drop.querySelector('summary').focus();
+    drop.open = false;
+  });
+});
+
 // Mobile menu toggle
 const toggle = document.getElementById('nav-toggle');
 const menu = document.getElementById('mobile-menu');

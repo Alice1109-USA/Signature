@@ -1,0 +1,34 @@
+/* Gift page structure adapted from the user-supplied Nature Beauty reference. */
+.gift-page section { padding: 4rem 0; }
+.gift-page .hero { height: auto; min-height: 560px; padding: 8rem 0 4rem; background: linear-gradient(90deg,rgba(28,20,16,.82) 0%,rgba(28,20,16,.62) 34%,rgba(28,20,16,.12) 70%),url("./images/gift-cards-hero.png?v=20260912-2") center/cover; }
+.gift-page .hero-content { max-width: 88rem; }
+.gift-page .hero h1 { max-width: 18ch; }
+.gift-page .hero p { max-width: 62ch; }
+.gift-page .hero .btn-outline { color: #fff; border-color: #fff; }
+.gift-page h2 { font-size: clamp(1.5rem,3vw,2.3rem); margin-bottom: 1rem; }
+.gift-page h3 { font-size: 1.2rem; margin-bottom: .75rem; }
+.gift-page p { color: var(--palette-muted); margin-bottom: 1rem; }
+.gift-page .hero p { color: #fff; }
+.gift-page .eyebrow { color: var(--palette-gold-light); margin-bottom: 1rem; }
+.gift-page .hero-actions,.gift-page .pricing-actions,.gift-page .local-proof-links { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.gift-page .trust-strip,.gift-page .area-chips,.gift-page .pricing-highlights { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 1.5rem; }
+.gift-page .trust-item { color: var(--palette-gold-light); }
+.gift-page .gift-card-panel,.gift-page .feature,.gift-page .local-proof-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
+.gift-page .gift-card-visual { min-height: 340px; background: url("./images/gift-reference-5.jpg") center/cover; border-radius: 12px; position: relative; }
+.gift-page .gift-card-visual::after { content: "Signature Therapeutic Wellness Gift Card"; position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: var(--palette-paper); color: var(--palette-purple); padding: 1.25rem; border-radius: 12px; font-family: Georgia,serif; font-size: 1.35rem; }
+.gift-page .soft-section,.gift-page .local-proof,.gift-page .service-areas { background: var(--palette-mist); }
+.gift-page .grid-3,.gift-page .gift-guide-grid,.gift-page .steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
+.gift-page .occasion-chips { display: flex; flex-wrap: wrap; gap: .75rem; }
+.gift-page .occasion-chip { padding: .65rem 1rem; border-radius: 999px; background: var(--palette-mist); color: var(--palette-purple); }
+.gift-page .service-img { background-size: cover; background-position: center; height: 220px; }
+.gift-page .service-card { border-radius: 12px; }
+.gift-page .service-body { padding: 1.5rem; }
+.gift-page .feature-img { min-height: 360px; border-radius: 12px; background-position: center; background-size: cover; }
+.gift-page .section-header { margin-bottom: 2rem; }
+.gift-page .learn-more,.gift-page .local-proof-links a,.gift-page p a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .25em; }
+.gift-page .faq-item { padding: 1.25rem 0; border-bottom: 1px solid var(--palette-line); }
+.gift-page .mini-list,.gift-page .local-proof-list { list-style: disc; padding-left: 1.25rem; margin-bottom: 1rem; }
+.gift-page .pricing-cta-card { max-width: 65rem; margin: auto; text-align: center; }
+.gift-page .pricing-cta-card .pricing-actions,.gift-page .pricing-highlights { justify-content: center; }
+@media(max-width:1000px) { .gift-page .grid-3 { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:768px) { .gift-page .gift-card-panel,.gift-page .feature,.gift-page .local-proof-grid,.gift-page .grid-3,.gift-page .gift-guide-grid,.gift-page .steps { grid-template-columns: 1fr; } .gift-page section { padding: 3rem 0; } .gift-page .hero { padding-top: 7rem; } }
