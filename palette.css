@@ -29,7 +29,6 @@
 .step,
 .pricing-table,
 .home-visit-panel,
-.head-spa-option,
 .nav-drop-menu,
 .about-img-1,
 .about-img-2,
@@ -162,6 +161,7 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .home-section-heading h2 { font-size: clamp(1.6rem, 3vw, 2.5rem); margin-bottom: 1rem; }
 .home-section-heading p { color: var(--palette-muted); max-width: 68ch; }
 .home-spa-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.home-spa-grid.single-service-grid { grid-template-columns: minmax(0, 32rem); }
 .home-spa-grid .service-card { display: flex; flex-direction: column; border-radius: 12px; }
 .home-spa-grid .service-body { flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
 .home-spa-grid .service-link { margin-top: auto; }
@@ -188,22 +188,17 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .head-spa-feature > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
 .head-spa-feature h2, .head-spa-reading h2, #head-spa-services h2, .head-spa-soft h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1.25rem; }
 .head-spa-feature p, .head-spa-reading p, .head-spa-intro { color: var(--palette-muted); margin-bottom: 1.25rem; }
-.head-spa-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-.head-spa-option { background: var(--palette-paper); border-radius: 12px; overflow: hidden; scroll-margin-top: 110px; }
-.head-spa-option > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-.head-spa-option > div { padding: 1.5rem; }
-.head-spa-option h3, .head-spa-guide h3 { font-size: 1.25rem; margin-bottom: .75rem; }
-.head-spa-option p, .head-spa-guide p { color: var(--palette-muted); margin-bottom: 1rem; }
-.head-spa-option a, .head-spa-reading a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .25em; }
+.head-spa-guide h3 { font-size: 1.25rem; margin-bottom: .75rem; }
+.head-spa-guide p { color: var(--palette-muted); margin-bottom: 1rem; }
+.head-spa-reading a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .25em; }
 .head-spa-guide { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
 .head-spa-list { list-style: disc; padding-left: 1.25rem; margin-bottom: 1.25rem; color: var(--palette-muted); }
 .head-spa-list li { margin-bottom: .5rem; }
 .head-spa-reading { max-width: 78rem; }
 .head-spa-reading > h2:not(:first-child) { margin-top: 2.5rem; }
 #head-spa-services { scroll-margin-top: 90px; }
-@media (max-width: 1000px) { .head-spa-options { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 768px) {
-  .head-spa-feature, .head-spa-options, .head-spa-guide { grid-template-columns: 1fr; }
+  .head-spa-feature, .head-spa-guide { grid-template-columns: 1fr; }
   .head-spa-hero { min-height: 560px; }
 }
 
@@ -467,7 +462,39 @@ textarea:focus { border-color: var(--palette-purple) !important; outline-color: 
 .insurance-bleed-img::after { background: rgba(54, 38, 69, .88); }
 .insurance-bleed-content { background-color: transparent !important; }
 .hero-img::after { background: linear-gradient(160deg, rgba(74,53,88,.35), transparent 40%, rgba(28,20,16,.88)); }
-.service-hero-img::after { background: linear-gradient(160deg, rgba(74,53,88,.4), transparent 40%, rgba(28,20,16,.9)); }
+.service-hero-img img {
+  filter: saturate(.88) brightness(.84) contrast(1.04);
+}
+.service-hero-img::after {
+  background:
+    linear-gradient(90deg, rgba(20, 13, 17, .84) 0%, rgba(28, 20, 16, .68) 38%, rgba(28, 20, 16, .28) 68%, rgba(20, 13, 17, .46) 100%),
+    linear-gradient(0deg, rgba(20, 13, 17, .46) 0%, transparent 55%);
+}
+.service-hero-content {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .48);
+}
+.service-hero h1,
+.service-hero p {
+  color: #fff !important;
+}
+.service-hero p {
+  font-weight: 400;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .72);
+}
+.service-hero .seo-page-cta > a:not(.btn) {
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .8);
+  text-decoration-thickness: 1px;
+}
+@media (max-width: 768px) {
+  .service-hero-img img {
+    filter: saturate(.82) brightness(.76) contrast(1.06);
+  }
+  .service-hero-img::after {
+    background: linear-gradient(90deg, rgba(20, 13, 17, .88) 0%, rgba(28, 20, 16, .64) 72%, rgba(20, 13, 17, .42) 100%);
+  }
+}
 .hero p, .service-hero p, .insurance-bleed p { color: #fff; }
 .form-group input::placeholder, .form-group textarea::placeholder { color: var(--palette-muted); opacity: 1; }
 ::selection { background: var(--palette-purple); color: #fff; }
