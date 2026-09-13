@@ -3,6 +3,21 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/lymphatic-massage-redmond",
+      "destination": "/manual-lymphatic-drainage",
+      "statusCode": 301
+    },
+    {
+      "source": "/insurance-accepted-massage",
+      "destination": "/insurance-massage-redmond",
+      "statusCode": 301
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
@@ -94,12 +109,12 @@
     },
     {
       "source": "/lymphatic-detox-massage",
-      "destination": "/lymphatic-massage-redmond",
+      "destination": "/manual-lymphatic-drainage",
       "statusCode": 301
     },
     {
       "source": "/lymphatic-detox-massage.html",
-      "destination": "/lymphatic-massage-redmond",
+      "destination": "/manual-lymphatic-drainage",
       "statusCode": 301
     },
     {
