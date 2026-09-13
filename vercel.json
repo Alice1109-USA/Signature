@@ -5,17 +5,17 @@
     {
       "source": "/lymphatic-massage-redmond",
       "destination": "/manual-lymphatic-drainage",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/insurance-accepted-massage",
       "destination": "/insurance-massage-redmond",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/services",
       "destination": "/",
-      "statusCode": 301
+      "permanent": true
     },
     {
       "source": "/index.html",

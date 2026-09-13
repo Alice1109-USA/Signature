@@ -1,4 +1,4 @@
-# Signature Therapeutic Wellness Website
+# Signature Wellness Website
 
 ## Architecture
 - Plain HTML + CSS static site (same pattern as labelle-website / smartkteam-website)
