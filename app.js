@@ -55,36 +55,3 @@ if (toggle && menu) {
   closeBtn.addEventListener('click', closeMenu);
   menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
 }
-
-// Contact form (Web3Forms)
-const form = document.getElementById('contact-form');
-if (form) {
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type=submit]');
-    const status = document.getElementById('form-status');
-    const originalLabel = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(Object.fromEntries(new FormData(form))),
-      });
-      const data = await res.json();
-      if (res.ok && data.success) {
-        status.textContent = "Message sent! We'll be in touch shortly.";
-        status.className = 'form-status success';
-        form.reset();
-      } else {
-        throw new Error();
-      }
-    } catch {
-      status.textContent = 'Something went wrong. Please call us at 206-384-3379.';
-      status.className = 'form-status error';
-    }
-    btn.disabled = false;
-    btn.textContent = originalLabel;
-  });
-}

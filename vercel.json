@@ -5,17 +5,17 @@
     {
       "source": "/lymphatic-massage-redmond",
       "destination": "/manual-lymphatic-drainage",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/insurance-accepted-massage",
       "destination": "/insurance-massage-redmond",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/services",
       "destination": "/",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/index.html",
@@ -186,6 +186,18 @@
       "source": "/pip-li-injury-massage.html",
       "destination": "/insurance-massage-redmond#pip-li",
       "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" }
+      ]
     }
   ]
 }
