@@ -1,4 +1,4 @@
-# Signature Wellness Price Maintenance
+# Signature Wellness SPA Price Maintenance
 
 When a service price changes, update every customer-visible and machine-readable copy in the same change.
 

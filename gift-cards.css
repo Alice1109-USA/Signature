@@ -15,7 +15,7 @@
 .gift-page .trust-item { color: var(--palette-gold-light); }
 .gift-page .gift-card-panel,.gift-page .feature,.gift-page .local-proof-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center; }
 .gift-page .gift-card-visual { min-height: 340px; background: url("./images/gift-reference-5.jpg") center/cover; border-radius: 12px; position: relative; }
-.gift-page .gift-card-visual::after { content: "Signature Wellness Gift Card"; position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: var(--palette-paper); color: var(--palette-purple); padding: 1.25rem; border-radius: 12px; font-family: Georgia,serif; font-size: 1.35rem; }
+.gift-page .gift-card-visual::after { content: "Signature Wellness SPA Gift Card"; position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: var(--palette-paper); color: var(--palette-purple); padding: 1.25rem; border-radius: 12px; font-family: Georgia,serif; font-size: 1.35rem; }
 .gift-page .soft-section,.gift-page .local-proof,.gift-page .service-areas { background: var(--palette-mist); }
 .gift-page .grid-3,.gift-page .gift-guide-grid,.gift-page .steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; }
 .gift-page .occasion-chips { display: flex; flex-wrap: wrap; gap: .75rem; }
