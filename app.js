@@ -6,6 +6,17 @@ if (nav) {
   }, { passive: true });
 }
 
+// Keep the Blog tab visible across the shared desktop and mobile navigation.
+const addBlogLinkAfterPricing = (pricingLink) => {
+  if (!pricingLink || pricingLink.parentElement.querySelector(':scope > a[href="./blog.html"]')) return;
+  const blogLink = document.createElement('a');
+  blogLink.href = './blog.html';
+  blogLink.textContent = 'BLOG';
+  pricingLink.insertAdjacentElement('afterend', blogLink);
+};
+addBlogLinkAfterPricing(document.querySelector('.nav-links > a[href="./pricing.html"]'));
+addBlogLinkAfterPricing(document.querySelector('.mobile-menu > a[href="./pricing.html"]'));
+
 // Category text links open hub pages; adjacent native details disclose services.
 const serviceDrops = [...document.querySelectorAll('details.nav-drop, details.mobile-service-drop')];
 serviceDrops.forEach((drop) => {
