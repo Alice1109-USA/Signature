@@ -442,13 +442,22 @@ textarea:focus { border-color: var(--palette-purple) !important; outline-color: 
 
 /* Mobile primary navigation uses one consistent tab rhythm and type scale. */
 @media (max-width: 768px) {
-  .mobile-menu { padding-top: 4.75rem; }
+  .mobile-menu {
+    bottom: auto;
+    height: 100vh;
+    height: 100dvh;
+    padding-top: 4.75rem;
+    padding-bottom: max(3rem, calc(1.5rem + env(safe-area-inset-bottom)));
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
   .mobile-menu > a,
   .mobile-category { border-color: var(--palette-line); }
   .mobile-category .mobile-service-drop > summary { min-height: 52px; }
   .mobile-service-drop > div { padding-top: .25rem; }
   .mobile-section { margin-top: 2rem; }
   .mobile-section a { min-height: 44px; padding: .65rem 0; line-height: 1.45; }
+  .mobile-ctas { padding-bottom: 1rem; }
 }
 
 /* La Belle reference palette, with readable text on both light and dark surfaces. */
