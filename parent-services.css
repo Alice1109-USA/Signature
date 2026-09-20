@@ -17,9 +17,55 @@
 .parent-service-note h2 { font-family: "Playfair Display", Georgia, serif; font-size: 1.35rem; font-weight: 400; margin-bottom: .35rem; }
 .parent-service-note p { max-width: 56ch; color: #5e5e5e; font-size: .82rem; line-height: 1.65; }
 .parent-service-note a { color: #4a3558; font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+.parent-services-layout { grid-template-columns: 1fr; }
+.parent-services-layout > .page-layout-sidebar { display: none; }
+.parent-service-showcase { display: grid; gap: clamp(1.5rem, 3vw, 2.75rem); }
+.parent-service-feature { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); min-height: 23rem; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: 0 18px 50px rgba(54,38,69,.09); }
+.parent-service-feature:nth-child(even) > figure { order: 2; }
+.parent-service-feature > figure { min-height: 100%; overflow: hidden; }
+.parent-service-feature > figure img { width: 100%; height: 100%; min-height: 23rem; object-fit: cover; }
+.parent-service-feature-content { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(1.6rem, 3.2vw, 2.75rem); }
+.parent-service-feature-content h3 { color: #1c1410; font-size: clamp(1.65rem, 2.5vw, 2.45rem); margin-bottom: .55rem; text-wrap: balance; }
+.parent-service-price { color: #9a713c !important; font-size: .78rem !important; font-weight: 700; letter-spacing: .12em; line-height: 1.8 !important; text-transform: uppercase; margin-bottom: 1.35rem !important; }
+.parent-service-feature-content > p:not(.parent-service-price):not(.parent-service-best) { color: #5e5e5e; font-size: .94rem; line-height: 1.8; margin-bottom: 1rem; max-width: 62ch; }
+.parent-service-best { color: #4a3558 !important; font-family: "Playfair Display", Georgia, serif; font-size: 1rem; font-style: italic; line-height: 1.7; margin-bottom: 1.5rem !important; }
+.parent-service-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .9rem; margin-top: .65rem; }
+.parent-service-actions .service-detail-link { color: #4a3558; font-size: .72rem; font-weight: 650; letter-spacing: .06em; text-decoration: underline; text-underline-offset: .3em; text-transform: uppercase; }
+.parent-service-actions .service-detail-link:focus-visible { outline: 2px solid #4a3558; outline-offset: 4px; }
+.parent-service-feature-highlight .parent-service-feature-content { background: #362645; }
+.parent-service-feature-highlight .parent-service-feature-content h3 { color: #fff; }
+.parent-service-feature-highlight .parent-service-feature-content > p:not(.parent-service-price),
+.parent-service-feature-highlight .parent-service-actions .service-detail-link { color: rgba(243,239,246,.8) !important; }
+.parent-service-feature-highlight .parent-service-best { color: #e8d5b0 !important; }
+.facial-services-page .parent-service-feature { height: 30rem; min-height: 30rem; }
+.facial-services-page .parent-service-feature > figure img { min-height: 0; }
+.facial-services-page .parent-service-feature:nth-child(1) > figure img { object-position: 78% center; }
+.facial-services-page .parent-service-feature:nth-child(2) > figure img { object-position: 80% center; }
+.facial-services-page .parent-service-feature:nth-child(3) > figure img { object-position: 72% center; }
+.massage-services-page .parent-service-showcase { gap: 1.4rem; }
+.massage-services-page .parent-service-feature { height: 27rem; min-height: 27rem; }
+.massage-services-page .parent-service-feature > figure img { min-height: 0; }
+.massage-services-page .parent-service-feature-content { padding: clamp(1.6rem, 2.8vw, 2.4rem); }
+.massage-services-page .parent-service-feature-content h3 { font-size: clamp(1.6rem, 2.3vw, 2.25rem); margin-bottom: .5rem; }
+.massage-services-page .parent-service-price { margin-bottom: 1rem !important; }
+.massage-services-page .parent-service-feature-content > p:not(.parent-service-price):not(.parent-service-best) { font-size: .9rem; line-height: 1.7; margin-bottom: .75rem; }
+.massage-services-page .parent-service-best { font-size: .94rem; line-height: 1.6; margin-bottom: 1rem !important; }
+.massage-services-page .parent-service-actions { margin-top: .45rem; }
+.massage-services-page .parent-service-actions .btn { padding: .78rem 1.55rem; font-size: .67rem; }
 @media (max-width: 768px) {
   .parent-service-grid, .parent-service-grid-three { grid-template-columns: 1fr; }
   .parent-service-card img { height: 13.5rem; }
   .parent-service-card:hover { transform: none; }
   .parent-service-note { padding: 1.4rem; }
+  .parent-service-feature { grid-template-columns: 1fr; min-height: 0; }
+  .parent-service-feature:nth-child(even) > figure { order: 0; }
+  .parent-service-feature > figure img { min-height: 16rem; aspect-ratio: 4 / 3; }
+  .parent-service-feature-content { padding: 1.6rem 1.25rem 1.85rem; }
+  .parent-service-actions { align-items: stretch; width: 100%; }
+  .parent-service-actions .btn { width: 100%; white-space: normal; text-align: center; }
+  .facial-services-page .parent-service-feature { height: auto; min-height: 0; }
+  .facial-services-page .parent-service-feature > figure img { object-position: 72% center; }
+  .massage-services-page .parent-service-feature { height: auto; min-height: 0; }
+  .massage-services-page .parent-service-feature > figure img { min-height: 16rem; }
+  .massage-services-page .parent-service-feature-content { padding: 1.6rem 1.25rem 1.85rem; }
 }

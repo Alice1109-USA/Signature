@@ -137,15 +137,53 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
   .seo-page-cta .btn { width: 100%; }
   .seo-reading p, .seo-page .page-layout-content p { line-height: 1.75; }
 }
-.home-visit-panel { max-width: 68rem; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3.5rem); background: var(--palette-paper); border: 1px solid var(--palette-line); border-radius: 16px; }
+.home-visit-panel { max-width: 76rem; margin: 0 auto; padding: clamp(1.5rem, 4vw, 3.5rem); background: var(--palette-paper); border: 1px solid var(--palette-line); border-radius: 16px; }
 .home-visit-panel h2 { color: var(--palette-purple); font-size: clamp(1.7rem, 3.4vw, 2.7rem); line-height: 1.2; text-wrap: balance; }
 .home-visit-panel p, .home-visit-panel li { color: var(--palette-muted); font-size: .95rem; line-height: 1.8; }
 .home-visit-panel p { max-width: 72ch; margin-bottom: 1.25rem; }
 .home-visit-panel strong { color: var(--palette-ink); font-weight: 600; }
-.home-visit-panel ul { list-style: disc; padding-left: 1.25rem; margin: 1.5rem 0 2rem; }
-.home-visit-panel li { margin-bottom: .65rem; }
-.home-visit-panel li a { color: var(--palette-purple); text-decoration: underline; text-underline-offset: .2em; }
-.home-visit-actions { gap: .75rem; }
+.home-visit-heading { max-width: 42rem; margin-bottom: 2.25rem; }
+.home-visit-heading > p { margin: .85rem 0 0; }
+.home-visit-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(22rem, .92fr); gap: clamp(2rem, 5vw, 5rem); align-items: stretch; }
+.home-visit-details { align-self: center; }
+.home-map-wrap { min-height: 33rem; overflow: hidden; border-radius: 12px; background: var(--palette-mist); border: 1px solid var(--palette-line); }
+.home-map-wrap iframe { width: 100%; height: 100%; min-height: 33rem; border: 0; }
+.visit-facts { display: grid; grid-template-columns: .8fr 1fr 1.35fr; gap: 0; border-top: 1px solid var(--palette-line); border-bottom: 1px solid var(--palette-line); }
+.visit-facts article { padding: 1.35rem 1.15rem; border-right: 1px solid var(--palette-line); }
+.visit-facts article:first-child { padding-left: 0; }
+.visit-facts article:last-child { border-right: 0; padding-right: 0; }
+.visit-facts h3 { color: var(--palette-purple); font-family: Inter, system-ui, sans-serif; font-size: .65rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .65rem; }
+.visit-facts p, .visit-facts address { color: var(--palette-muted); font-size: .8rem; font-style: normal; line-height: 1.65; margin: 0; }
+.visit-facts strong { color: var(--palette-ink); }
+.home-visit-actions { gap: 1.25rem; margin-top: 2rem; }
+.home-visit-call { color: var(--palette-purple); font-size: .82rem; font-weight: 600; text-decoration: underline; text-underline-offset: .3em; }
+
+/* Keep each service hero focused on the subject's complete face across wide and narrow crops. */
+.service-hero-img img[src*="anti-aging-facial-hero-v2"] { object-position: 72% 48%; }
+.service-hero-img img[src*="deep-cleansing-facial-hero-v2"] { object-position: 78% 60%; }
+.service-hero-img img[src*="hydrating-facial-hero-v2"] { object-position: 80% 42%; }
+.service-hero-img img[src*="facials-overview-hero-v2"] { object-position: 76% 52%; }
+.service-hero-img img[src*="head-spa-hero-v2"] { object-position: 72% 48%; }
+.service-hero-img img[src*="couples-massage-hero"] { object-position: 68% 52%; }
+.service-hero-img img[src*="prenatal-massage-hero-v2"] { object-position: 30% 44%; }
+.service-hero-img img[src*="swedish-massage-service-v2"] { object-position: 38% 54%; }
+.service-hero-img img[src*="lomi-lomi-hero-v2"] { object-position: 42% 42%; }
+.service-hero-img img[src*="lomi-lomi-massage-service"] { object-position: 42% 46%; }
+.service-hero-img img[src*="pain-relief-hero-v2"] { object-position: 82% 38%; }
+.service-hero-img img[src*="neck-shoulder-hero"] { object-position: 30% 60%; }
+.service-hero-img img[src*="insurance-massage-service-v2"] { object-position: 82% 54%; }
+.service-hero-img img[src*="insurance-massage-hero-v3"] { object-position: 78% 52%; }
+@media (max-width: 860px) {
+  .home-visit-grid { grid-template-columns: 1fr; }
+  .home-map-wrap, .home-map-wrap iframe { min-height: 22rem; }
+}
+@media (max-width: 520px) {
+  .home-visit-panel { padding: 1.15rem; border-radius: 12px; }
+  .home-map-wrap, .home-map-wrap iframe { min-height: 18rem; }
+  .visit-facts { grid-template-columns: 1fr; }
+  .visit-facts article, .visit-facts article:first-child, .visit-facts article:last-child { padding: 1rem 0; border-right: 0; border-bottom: 1px solid var(--palette-line); }
+  .visit-facts article:last-child { border-bottom: 0; }
+}
 .all-services-link { margin-top: 2.5rem; text-align: center; }
 .services-intro { padding-top: 9rem; }
 .services-intro h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
@@ -232,9 +270,40 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .head-spa-hero { min-height: 520px; }
 .head-spa-hero .btn { margin-top: 1.25rem; }
 .head-spa-soft { background: var(--palette-mist); }
+.head-spa-menu { background: var(--palette-cream); }
+.head-spa-menu-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2.5rem; }
+.head-spa-menu-heading > div { max-width: 46rem; }
+.head-spa-menu-heading h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); margin-bottom: .85rem; }
+.head-spa-menu-heading p { color: var(--palette-muted); line-height: 1.8; }
+.head-spa-experiences { display: grid; gap: clamp(1.5rem, 3vw, 2.75rem); }
+.head-spa-experience { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); height: 30rem; min-height: 30rem; overflow: hidden; border-radius: var(--radius-panel); background: var(--palette-paper); box-shadow: 0 18px 50px rgba(54, 38, 69, .09); }
+.head-spa-experience-reverse figure { order: 2; }
+.head-spa-experience figure { min-height: 100%; overflow: hidden; }
+.head-spa-experience figure img { width: 100%; height: 100%; min-height: 23rem; object-fit: cover; }
+.head-spa-experience-content { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(1.6rem, 3.2vw, 2.75rem); }
+.head-spa-experience-content h3 { color: var(--palette-ink); font-size: clamp(1.65rem, 2.5vw, 2.45rem); margin-bottom: .55rem; text-wrap: balance; }
+.head-spa-experience-price { color: var(--palette-gold) !important; font-size: .82rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 1.6rem !important; }
+.head-spa-experience-content > p:not(.head-spa-experience-price):not(.head-spa-best):not(.head-spa-sensitivity) { color: var(--palette-muted); font-size: .98rem; line-height: 1.8; margin-bottom: 1.15rem; }
+.head-spa-best { color: var(--palette-purple) !important; font-family: 'Playfair Display', Georgia, serif; font-size: 1rem; font-style: italic; line-height: 1.7; margin-bottom: 1.5rem !important; }
+.head-spa-includes { width: 100%; padding-top: 1.4rem; border-top: 1px solid var(--palette-line); }
+.head-spa-includes h4 { color: var(--palette-muted); font-family: Inter, system-ui, sans-serif; font-size: .67rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 1rem; }
+.head-spa-includes ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem 1.25rem; }
+.head-spa-includes li { color: var(--palette-muted); font-size: .82rem; line-height: 1.55; }
+.head-spa-includes li::before { content: ''; display: inline-block; width: .45rem; height: 1px; margin-right: .5rem; background: var(--palette-gold); vertical-align: middle; }
+.head-spa-sensitivity { color: var(--palette-muted); font-size: .75rem; line-height: 1.6; margin-top: 1rem; }
+.head-spa-experience .btn { margin-top: 1.7rem; }
+.head-spa-experience-featured .head-spa-experience-content { background: var(--palette-plum); }
+.head-spa-experience-featured .head-spa-experience-content h3 { color: #fff; }
+.head-spa-experience-featured .head-spa-experience-content > p:not(.head-spa-experience-price),
+.head-spa-experience-featured .head-spa-includes li { color: rgba(243, 239, 246, .8) !important; }
+.head-spa-experience-featured .head-spa-best { color: var(--palette-gold-light) !important; }
+.head-spa-experience-featured .head-spa-includes { border-color: rgba(243, 239, 246, .2); }
+.head-spa-experience-featured .head-spa-includes h4 { color: rgba(243, 239, 246, .62); }
+.head-spa-experience-featured .btn { background: var(--palette-gold) !important; color: var(--palette-ink) !important; }
+.head-spa-experience-featured .btn:hover { background: var(--palette-gold-light) !important; }
 .head-spa-feature { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; }
 .head-spa-feature > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 12px; }
-.head-spa-feature h2, .head-spa-reading h2, #head-spa-services h2, .head-spa-soft h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1.25rem; }
+.head-spa-feature h2, .head-spa-reading h2, #head-spa-service h2, .head-spa-soft h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-bottom: 1.25rem; }
 .head-spa-feature p, .head-spa-reading p, .head-spa-intro { color: var(--palette-muted); margin-bottom: 1.25rem; }
 .head-spa-guide h3 { font-size: 1.25rem; margin-bottom: .75rem; }
 .head-spa-guide p { color: var(--palette-muted); margin-bottom: 1rem; }
@@ -244,9 +313,17 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .head-spa-list li { margin-bottom: .5rem; }
 .head-spa-reading { max-width: 78rem; }
 .head-spa-reading > h2:not(:first-child) { margin-top: 2.5rem; }
-#head-spa-services { scroll-margin-top: 90px; }
+#head-spa-service { scroll-margin-top: 90px; }
 @media (max-width: 768px) {
-  .head-spa-feature, .head-spa-guide { grid-template-columns: 1fr; }
+  .head-spa-feature, .head-spa-guide, .head-spa-experience { grid-template-columns: 1fr; }
+  .head-spa-experience { height: auto; min-height: 0; }
+  .head-spa-menu-heading { display: block; }
+  .head-spa-menu-heading .btn-outline { margin-top: 1.5rem; width: 100%; }
+  .head-spa-experience-reverse figure { order: 0; }
+  .head-spa-experience figure img { min-height: 16rem; aspect-ratio: 4 / 3; }
+  .head-spa-experience-content { padding: 1.6rem 1.25rem 1.85rem; }
+  .head-spa-includes ul { grid-template-columns: 1fr; }
+  .head-spa-experience .btn { width: 100%; white-space: normal; text-align: center; }
   .head-spa-hero { min-height: 560px; }
 }
 
