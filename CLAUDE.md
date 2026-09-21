@@ -18,7 +18,7 @@
   swap for the real logo file (as an `<img>`) across all 17 pages when it's provided
 
 ## Business Info
-- Address: 2763 152nd Place NE, Suite 4A, Redmond, WA 98052
+- Address: 2763 152nd Ave NE, Suite 4A, Redmond, WA 98052
 - Phone: (425) 543-2881
 - Email: sigtherapeutics@gmail.com
 - Appointment booking: Square (`https://book.squareup.com/appointments/ruv6lje3z2m25r/location/LBCJ5N7KEN97H/services`)
