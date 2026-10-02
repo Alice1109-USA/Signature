@@ -17,6 +17,48 @@ const addBlogLinkAfterPricing = (pricingLink) => {
 addBlogLinkAfterPricing(document.querySelector('.nav-links > a[href="./pricing.html"]'));
 addBlogLinkAfterPricing(document.querySelector('.mobile-menu > a[href="./pricing.html"]'));
 
+// Older editorial pages use a compact header. Complete it with the same
+// gift-card action and mobile navigation available on the main site pages.
+const navCta = document.querySelector('.nav-cta');
+if (navCta && !navCta.querySelector('a[href="./gift-cards.html"]')) {
+  const giftLink = document.createElement('a');
+  giftLink.href = './gift-cards.html';
+  giftLink.className = 'gift-link';
+  giftLink.textContent = 'Gift Cards';
+  navCta.insertBefore(giftLink, navCta.firstChild);
+}
+
+const primaryNav = document.querySelector('.nav');
+if (primaryNav && !document.getElementById('nav-toggle')) {
+  const mobileToggle = document.createElement('button');
+  mobileToggle.className = 'nav-toggle';
+  mobileToggle.id = 'nav-toggle';
+  mobileToggle.setAttribute('aria-label', 'Open menu');
+  mobileToggle.setAttribute('aria-expanded', 'false');
+  mobileToggle.innerHTML = '<span></span><span></span><span></span>';
+  primaryNav.appendChild(mobileToggle);
+}
+
+if (primaryNav && !document.getElementById('mobile-menu')) {
+  const mobileMenu = document.createElement('div');
+  mobileMenu.className = 'mobile-menu';
+  mobileMenu.id = 'mobile-menu';
+  mobileMenu.setAttribute('role', 'dialog');
+  mobileMenu.setAttribute('aria-label', 'Navigation');
+  mobileMenu.innerHTML = `
+    <a href="./index.html">HOME</a>
+    <a href="./massage-redmond.html">MASSAGE</a>
+    <a href="./facials-redmond.html">FACIALS</a>
+    <a href="./head-spa-redmond.html">HEAD SPA</a>
+    <a href="./pricing.html">PRICING</a>
+    <a href="./blog.html">BLOG</a>
+    <a href="./gift-cards.html">GIFT CARDS</a>
+    <div class="mobile-ctas">
+      <a href="https://book.squareup.com/appointments/ruv6lje3z2m25r/location/LBCJ5N7KEN97H/services" class="btn" target="_blank" rel="noopener">Book Appointment</a>
+    </div>`;
+  primaryNav.insertAdjacentElement('afterend', mobileMenu);
+}
+
 // Category text links open hub pages; adjacent native details disclose services.
 const serviceDrops = [...document.querySelectorAll('details.nav-drop, details.mobile-service-drop')];
 serviceDrops.forEach((drop) => {

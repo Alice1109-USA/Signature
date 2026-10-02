@@ -1,6 +1,8 @@
 /* Gift page structure adapted from the user-supplied Nature Beauty reference. */
 .gift-page section { padding: 4rem 0; }
-.gift-page .hero { height: auto; min-height: 560px; padding: 8rem 0 4rem; background: linear-gradient(90deg,rgba(28,20,16,.82) 0%,rgba(28,20,16,.62) 34%,rgba(28,20,16,.12) 70%),url("./images/gift-cards-hero.jpg?v=20260912-3") center/cover; }
+.gift-page > .breadcrumb { display: none; }
+.gift-page .hero { height: auto; min-height: 560px; padding: 8rem 0 4rem; background: linear-gradient(90deg,rgba(28,20,16,.72) 0%,rgba(28,20,16,.52) 42%,rgba(28,20,16,.2) 78%,rgba(28,20,16,.12) 100%),url("./images/gift-cards-hero.jpg?v=20260912-3") center/cover; }
+.gift-card-page .nav.scrolled { box-shadow: 0 1px 0 var(--palette-line) !important; }
 .gift-page .hero-content { max-width: 88rem; }
 .gift-page .hero h1 { max-width: 18ch; }
 .gift-page .hero p { max-width: 62ch; }

@@ -281,10 +281,16 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 }
 
 /* Fixed logo footprint leaves room for an evenly aligned desktop menu. */
-.nav-logo { width: clamp(160px, 17vw, 210px); }
+.nav-logo { width: clamp(124px, 10.8vw, 152px); }
 .nav-mark { width: 100%; max-width: 100%; height: auto; object-fit: contain; }
-.nav-logo-editorial { width: clamp(190px, 20vw, 255px); margin-left: clamp(-60px, -4.7vw, -45px); }
-.footer-logo .footer-mark { width: 240px; max-width: 100%; height: auto; }
+.nav-logo-editorial { width: clamp(124px, 10.8vw, 152px); margin-left: 0; }
+.footer-logo .footer-mark { width: 160px; max-width: 100%; height: auto; }
+.nav-mark-white,
+.footer-logo img { filter: brightness(0) invert(1); }
+.nav.scrolled .nav-mark-color,
+.nav.scrolled .nav-mark:not(.nav-mark-white) {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(16%) saturate(1429%) hue-rotate(229deg) brightness(89%) contrast(88%);
+}
 .nav-links { flex: 1 0 auto; justify-content: center; gap: clamp(.65rem, 1.8vw, 1.75rem); }
 .nav-links > a, .nav-drop > a { min-height: 44px; display: inline-flex; align-items: center; }
 .treatment-section { margin-bottom: 2.5rem; }
@@ -336,9 +342,14 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .treatment-faq summary { cursor: pointer; font-weight: 500; }
 .treatment-faq details p { margin-top: .75rem; }
 @media (min-width: 769px) and (max-width: 1000px) {
-  .nav-cta .gift-link { display: none; }
-  .nav-logo { width: 160px; }
+  .nav-logo { width: 124px; }
   .nav-links { gap: .65rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-logo,
+  .nav-logo-editorial { width: 118px; }
+  .footer-logo .footer-mark { width: 148px; }
 }
 
 /* Keep the homepage benefit labels on one clean baseline. */
