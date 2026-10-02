@@ -59,6 +59,19 @@ if (primaryNav && !document.getElementById('mobile-menu')) {
   primaryNav.insertAdjacentElement('afterend', mobileMenu);
 }
 
+// Keep Gift Cards with the primary links on mobile, immediately after Blog.
+// Most full-page headers render it as a secondary CTA, while editorial pages
+// already render it in the primary list; normalize both header variants here.
+const mobileNav = document.getElementById('mobile-menu');
+if (mobileNav) {
+  const mobileBlogLink = mobileNav.querySelector(':scope > a[href="./blog.html"]');
+  const mobileGiftLink = mobileNav.querySelector('a[href="./gift-cards.html"]');
+  if (mobileBlogLink && mobileGiftLink) {
+    mobileGiftLink.classList.remove('btn-outline');
+    mobileBlogLink.insertAdjacentElement('afterend', mobileGiftLink);
+  }
+}
+
 // Category text links open hub pages; adjacent native details disclose services.
 const serviceDrops = [...document.querySelectorAll('details.nav-drop, details.mobile-service-drop')];
 serviceDrops.forEach((drop) => {
