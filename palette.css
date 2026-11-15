@@ -294,6 +294,15 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .nav-links { flex: 1 0 auto; justify-content: center; gap: clamp(.65rem, 1.8vw, 1.75rem); }
 .nav-links > a, .nav-drop > a { min-height: 44px; display: inline-flex; align-items: center; }
 .treatment-section { margin-bottom: 2.5rem; }
+.focus-area-page .benefits-grid {
+  row-gap: 1.25rem;
+}
+.focus-area-page .benefits-grid + .treatment-section {
+  padding-top: 1.5rem;
+}
+.focus-area-page .treatment-section {
+  margin-bottom: 3.5rem;
+}
 .service-reading-page .page-layout-content p { line-height: 1.8; margin: 0 0 1.1rem; max-width: 70ch; color: var(--palette-muted); }
 .service-reading-page .treatment-section { margin-bottom: 3rem; }
 .service-reading-page .treatment-section h2 { line-height: 1.35; }
@@ -329,6 +338,8 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .insurance-massage-page .page-layout-sidebar p { line-height: 1.75; }
 .insurance-massage-page [id] { scroll-margin-top: 110px; }
 @media (max-width: 768px) {
+  .focus-area-page .benefits-grid + .treatment-section { padding-top: 1rem; }
+  .focus-area-page .treatment-section { margin-bottom: 2.75rem; }
   .insurance-massage-page .treatment-section { margin-bottom: 2.25rem; }
   .insurance-massage-page .page-layout-content p { line-height: 1.75; }
 }
@@ -364,6 +375,7 @@ body { background: var(--palette-cream) !important; color: var(--palette-ink); }
 .nav,
 .nav-links,
 .nav-cta { flex-wrap: nowrap !important; }
+.nav-cta .gift-link { display: none; }
 .nav-links > a,
 .nav-drop > a,
 .gift-link { white-space: nowrap; }
